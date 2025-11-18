@@ -197,10 +197,7 @@ const Contact: React.FC = () => {
 
       <section className="h-96 bg-gray-200 dark:bg-navy-900">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.1748449044635!2d55.27163631501204!3d25.197196483881097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1640000000000!5m2!1sen!2s"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
+          src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d202.34924294589138!2d51.4332346!3d35.7609328!3m2!1i1024!2i768!4f13.1!2m1!1z2YXbjNix2K_Yp9mF2KfYryzYrtuM2KfYqNin2YYg2qnYp9iy2LHZiNmGINi02YXYp9mE24wsINiu24zYp9io2KfZhiDZhtuM2qkg2LHYp9uMLCDZvtmE2KfaqSDbsiwg2LfYqNmC2Ycg2LPZiNmFINmI2KfYrdivINu24oCt!5e0!3m2!1sen!2s!4v1763468468527!5m2!1sen!2s"
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
