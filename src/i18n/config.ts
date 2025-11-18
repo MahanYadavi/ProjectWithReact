@@ -10,7 +10,8 @@ const resources = {
         projects: 'Projects',
         services: 'Services',
         contact: 'Contact Us',
-        cta: 'Request Cooperation'
+        cta: 'Request Cooperation',
+        selectLanguage: 'Select Language'
       },
       hero: {
         title: 'Expert Implementation of Industrial-Scale Electrical, Gas & Pelletizing Projects',
@@ -165,7 +166,8 @@ const resources = {
         projects: 'پروژه‌ها',
         services: 'خدمات',
         contact: 'تماس با ما',
-        cta: 'درخواست همکاری'
+        cta: 'درخواست همکاری',
+        selectLanguage: 'انتخاب زبان'
       },
       hero: {
         title: 'مجری تخصصی پروژه‌های برق، گاز و گندله‌سازی در مقیاس صنعتی',
@@ -320,7 +322,8 @@ const resources = {
         projects: 'المشاريع',
         services: 'الخدمات',
         contact: 'اتصل بنا',
-        cta: 'طلب تعاون'
+        cta: 'طلب تعاون',
+        selectLanguage: 'اختر اللغة'
       },
       hero: {
         title: 'تنفيذ متخصص لمشاريع الكهرباء والغاز وتكوير الخام على نطاق صناعي',
