@@ -136,7 +136,6 @@ const Contact: React.FC = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-navy-700 bg-white dark:bg-navy-800 text-navy-900 dark:text-white focus:ring-2 focus:ring-gold-600 focus:border-transparent outline-none transition-all"
-                      placeholder="John Doe"
                     />
                   </div>
 
@@ -151,7 +150,6 @@ const Contact: React.FC = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-navy-700 bg-white dark:bg-navy-800 text-navy-900 dark:text-white focus:ring-2 focus:ring-gold-600 focus:border-transparent outline-none transition-all"
-                      placeholder="john@example.com"
                     />
                   </div>
 
@@ -166,7 +164,6 @@ const Contact: React.FC = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-navy-700 bg-white dark:bg-navy-800 text-navy-900 dark:text-white focus:ring-2 focus:ring-gold-600 focus:border-transparent outline-none transition-all"
-                      placeholder="+1 234 567 8900"
                     />
                   </div>
 
@@ -181,7 +178,6 @@ const Contact: React.FC = () => {
                       required
                       rows={5}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-navy-700 bg-white dark:bg-navy-800 text-navy-900 dark:text-white focus:ring-2 focus:ring-gold-600 focus:border-transparent outline-none transition-all resize-none"
-                      placeholder="Tell us about your project..."
                     ></textarea>
                   </div>
 

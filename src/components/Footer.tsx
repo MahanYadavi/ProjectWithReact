@@ -66,11 +66,11 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center space-x-3 rtl:space-x-reverse text-gray-400">
                 <Phone className="w-5 h-5 text-gold-500 flex-shrink-0" />
-                <span className="text-sm">+1 234 567 8900</span>
+                <span className="text-sm">02122905211</span>
               </li>
               <li className="flex items-center space-x-3 rtl:space-x-reverse text-gray-400">
                 <Mail className="w-5 h-5 text-gold-500 flex-shrink-0" />
-                <span className="text-sm">info@powerflow.com</span>
+                <span className="text-sm">info@mobanir.com</span>
               </li>
             </ul>
           </div>
