@@ -6,7 +6,7 @@ import { MapPin, Calendar, Tag } from 'lucide-react';
 const categories = ['all', 'substations', 'transmission', 'pelletizing', 'epc', 'automation'];
 
 const projectMetadata = [
-  { id: 1, image: '/images/projects/project-1.jpg', category: 'substations', year: '2024' },
+  { id: 1, image: '/images/projects/sjdg.png', category: 'substations', year: '1380' },
   { id: 2, image: '/images/projects/project-2.jpg', category: 'transmission', year: '2023' },
   { id: 3, image: '/images/projects/project-3.jpg', category: 'pelletizing', year: '2024' },
   { id: 4, image: '/images/projects/project-4.jpg', category: 'epc', year: '2023' },
