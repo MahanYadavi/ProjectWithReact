@@ -259,7 +259,7 @@ const resources = {
       },
       contact: {
         title: 'تماس با ما',
-        subtitle: 'با تیم ما در ارتباط باشید',
+        subtitle: 'با ما در ارتباط باشید',
         name: 'نام و نام خانوادگی',
         email: 'آدرس ایمیل',
         phone: 'شماره تلفن',

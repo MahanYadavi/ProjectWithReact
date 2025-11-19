@@ -28,23 +28,34 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-16">
-      <section className="relative py-20 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 dark:from-black dark:via-navy-950 dark:to-black text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              {t('contact.title')}
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              {t('contact.subtitle')}
-            </p>
-          </motion.div>
-        </div>
-      </section>
+   <section className="relative py-20 text-white">
+  {/* تصویر بک‌گراند */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage: "url('/images/Logo.png')",
+    }}
+  ></div>
 
+  {/* Overlay نیمه‌شفاف برای خوانایی متن */}
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  {/* محتوای متن */}
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        {t('contact.title')}
+      </h1>
+      <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        {t('contact.subtitle')}
+      </p>
+    </motion.div>
+  </div>
+</section>
       <section className="py-20 bg-white dark:bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -72,18 +83,23 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4 rtl:space-x-reverse p-6 bg-gray-50 dark:bg-navy-900 rounded-xl">
-                  <div className="w-12 h-12 bg-gold-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-navy-900 dark:text-white mb-2">
-                      {t('contact.phone')}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400">+1 234 567 8900</p>
-                    <p className="text-gray-600 dark:text-gray-400">+1 234 567 8901</p>
-                  </div>
-                </div>
+<div className="flex items-start space-x-4 rtl:space-x-reverse p-6 bg-gray-50 dark:bg-navy-900 rounded-xl">
+  <div className="w-12 h-12 bg-gold-600 rounded-lg flex items-center justify-center flex-shrink-0">
+    <Phone className="w-6 h-6 text-white" />
+  </div>
+  <div className="text-right">
+    <h3 className="font-semibold text-navy-900 dark:text-white mb-2">
+      {t('contact.phone')}
+    </h3>
+    <p className="text-gray-600 dark:text-gray-400 mb-1 inline-block" dir="ltr">
+       021 2290 5211
+    </p>
+    <br></br>
+    <p className="text-gray-600 dark:text-gray-400 inline-block" dir="ltr">
+      0912 024 1178
+    </p>
+  </div>
+</div>
 
                 <div className="flex items-start space-x-4 rtl:space-x-reverse p-6 bg-gray-50 dark:bg-navy-900 rounded-xl">
                   <div className="w-12 h-12 bg-gold-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -93,8 +109,8 @@ const Contact: React.FC = () => {
                     <h3 className="font-semibold text-navy-900 dark:text-white mb-2">
                       {t('contact.email')}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400">info@powerflow.com</p>
-                    <p className="text-gray-600 dark:text-gray-400">support@powerflow.com</p>
+                    <p className="text-gray-600 dark:text-gray-400">info@mobanir.com</p>
+                    <p className="text-gray-600 dark:text-gray-400">support@mobanir.com</p>
                   </div>
                 </div>
 

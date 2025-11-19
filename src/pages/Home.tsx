@@ -36,8 +36,11 @@ const Home: React.FC = () => {
     { icon: HardHat, title: t('services.epc'), description: t('services.epcDesc') },
   ];
 
-  const clients = ['Mobarakeh Steel', 'Chadormalu Mining', 'Gol Gohar', 'National Gas Co.', 'MAPNA Group', 'Khouzestan Steel'];
-
+  const clients = [
+  { name: 'Client 1', logo: '/Shoraka/FolladMobarake.png' },
+  { name: 'Client 2', logo: '/Shoraka/mapna.svg' },
+  { name: 'Client 3', logo: '/images/client3.png' },
+];
   const featuredProjects = [
     { id: 1, title: 'Golgohar Pelletizing Plant', image: '/images/projects/featured-1.jpg', category: 'Pelletizing' },
     { id: 2, title: '400kV Substation - Isfahan', image: '/images/projects/featured-2.jpg', category: 'Substations' },
@@ -217,19 +220,42 @@ const Home: React.FC = () => {
 
       {/* Clients Section */}
       <section className="py-16 bg-white dark:bg-navy-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-navy-900 dark:text-white mb-4">{t('clients.title')}</h2>
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {clients.map((client, index) => (
-              <motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="flex items-center justify-center p-4">
-                <span className="text-lg font-semibold text-gray-500 dark:text-gray-400 text-center grayscale hover:grayscale-0 transition-all">{client}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-center mb-12"
+    >
+      <h2 className="text-2xl md:text-3xl font-bold text-navy-900 dark:text-white mb-4">
+        {t('clients.title')}
+      </h2>
+    </motion.div>
+
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+      {clients.map((client, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.1, duration: 0.5, type: 'spring', stiffness: 120 }}
+          className="flex items-center justify-center p-4"
+        >
+          <motion.img
+            src={client.logo}
+            alt={client.name}
+            className="max-h-45 object-contain grayscale transition-all" // اندازه بزرگ‌تر
+            whileHover={{ scale: 1.3, filter: 'grayscale(0%)' }}
+            transition={{ type: 'spring', stiffness: 200 }}
+          />
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
       {/* Certifications Section */}
       <section className="py-20 bg-gray-50 dark:bg-black">
