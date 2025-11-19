@@ -7,6 +7,7 @@ const resources = {
       nav: {
         home: 'Home',
         about: 'About Us',
+        records: 'Records',
         projects: 'Projects',
         services: 'Services',
         contact: 'Contact Us',
@@ -156,6 +157,13 @@ const resources = {
         services: 'Services',
         rights: 'All rights reserved.',
       }
+      ,
+      recordsPage: {
+        title: 'Records',
+        subtitle: 'Company records and past projects',
+        intro: 'This page contains company records, key project summaries and historical information about our work.',
+        note: 'Content coming soon.'
+      }
     }
   },
   fa: {
@@ -163,6 +171,7 @@ const resources = {
       nav: {
         home: 'خانه',
         about: 'درباره ما',
+        records: 'سوابق',
         projects: 'پروژه‌ها',
         services: 'خدمات',
         contact: 'تماس با ما',
@@ -234,10 +243,11 @@ const resources = {
       about: {
         title: 'درباره ما',
         subtitle: 'تعالی در پیمانکاری برق و گاز',
-        description: 'با بیش از ۱۵ سال تجربه، ما خود را به عنوان یک شرکت پیشرو در زمینه پیمانکاری برق و گاز معرفی کرده‌ایم. تیم متخصصان گواهینamه‌دار ما راهکارهای نوآورانه برای پروژه‌های مسکونی، تجاری و صنعتی ارائه می‌دهند.',
+        description: 'شرکت مهندسین بهین آوران نیرو از سال 1378 با ترکیبی از نیروهای جوان و پر تلاش در حوزه های صنعت برق,گاز و نفت آغاز به کار کرده و تاکنون توانسته است جهت خدمت رسانی به کشور و ملت ایران پروژه های محوله را به نحو شایسته به اتمام برساند',
         story: {
           title: 'داستان ما',
-          p2: 'از پروژه‌های مسکونی تا تاسیسات صنعتی بزرگ، ما تخصص، تعهد و نوآوری را در هر چالشی به کار می‌گیریم. تعهد ما به ایمنی، کیفیت و رضایت مشتری، ما را به شریکی قابل اعتماد در این صنعت تبدیل کرده است.'
+          p2: `امید است با تهیه این گزارش از پروژه های انجام شده، قادر به همکاری باشیم.
+رضا رجبیان`
         },
         coreValues: {
           title: 'ارزش‌های اصلی ما',
@@ -312,6 +322,13 @@ const resources = {
         services: 'خدمات',
         rights: 'تمامی حقوق محفوظ است.',
       }
+        ,
+        recordsPage: {
+          title: 'سوابق',
+          subtitle: 'سوابق شرکت و پروژه‌های گذشته',
+          intro: 'این صفحه شامل سوابق شرکت، خلاصه پروژه‌های کلیدی و اطلاعات تاریخی درباره فعالیت‌های ما است.',
+          note: 'محتوا به‌زودی تکمیل خواهد شد.'
+        }
     }
   },
   ar: {
@@ -319,6 +336,7 @@ const resources = {
       nav: {
         home: 'الرئيسية',
         about: 'من نحن',
+        records: 'السجلات',
         projects: 'المشاريع',
         services: 'الخدمات',
         contact: 'اتصل بنا',
@@ -468,6 +486,13 @@ const resources = {
         services: 'الخدمات',
         rights: 'جميع الحقوق محفوظة.',
       }
+        ,
+        recordsPage: {
+          title: 'السجلات',
+          subtitle: 'سجلات الشركة والمشاريع السابقة',
+          intro: 'تحتوي هذه الصفحة على سجلات الشركة، وملخصات المشاريع الرئيسية، ومعلومات تاريخية عن أعمالنا.',
+          note: 'المحتوى قيد الإعداد.'
+        }
     }
   }
 };

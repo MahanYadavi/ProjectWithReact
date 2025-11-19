@@ -8,6 +8,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
+import Records from './pages/Records';
 import './i18n/config';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/records" element={<Records />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
