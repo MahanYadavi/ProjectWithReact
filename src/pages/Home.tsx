@@ -22,8 +22,8 @@ const Home: React.FC = () => {
   };
 
   const introStats = [
-    { number: 15, suffix: '+', label: t('intro.stat1') },
-    { number: 80, suffix: '+', label: t('intro.stat2') },
+    { number: 25, suffix: '+', label: t('intro.stat1') },
+    { number: 100, suffix: '+', label: t('intro.stat2') },
     { number: 50, suffix: '+', label: t('intro.stat3') },
   ];
 

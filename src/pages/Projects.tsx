@@ -6,23 +6,40 @@ import { MapPin, Calendar, Tag } from 'lucide-react';
 const categories = ['all', 'substations', 'transmission', 'pelletizing', 'epc', 'automation'];
 
 const projectMetadata = [
-  { id: 1, image: '/images/projects/sjdg.png', category: 'substations', year: '1380' },
-  { id: 2, image: '/images/projects/project-2.jpg', category: 'transmission', year: '2023' },
-  { id: 3, image: '/images/projects/project-3.jpg', category: 'pelletizing', year: '2024' },
-  { id: 4, image: '/images/projects/project-4.jpg', category: 'epc', year: '2023' },
-  { id: 5, image: '/images/projects/project-5.jpg', category: 'automation', year: '2024' },
-  { id: 6, image: '/images/projects/project-6.jpg', category: 'substations', year: '2023' },
-  { id: 7, image: '/images/projects/project-7.jpg', category: 'transmission', year: '2024' },
-  { id: 8, image: '/images/projects/project-8.jpg', category: 'pelletizing', year: '2023' },
-  { id: 9, image: '/images/projects/project-9.jpg', category: 'automation', year: '2024' },
-  { id: 10, image: '/images/projects/project-10.jpg', category: 'substations', year: '2023' },
-  { id: 11, image: '/images/projects/project-11.jpg', category: 'epc', year: '2024' },
-  ...Array.from({ length: 39 }, (_, i) => ({
-    id: 12 + i,
-    image: '/images/projects/project-placeholder.jpg',
-    category: categories[(i % 5) + 1],
-    year: `${2023 + (i % 2)}`
-  }))
+  { id: 1, image: '/images/projects/1.png', category: 'substations', year: '1380' },
+  { id: 2, image: '/images/projects/2.png', category: 'transmission', year: '1398' },
+  { id: 3, image: '/images/projects/3.jpg', category: 'pelletizing', year: '1402' },
+  { id: 4, image: '/images/projects/4.png', category: 'epc', year: '1402' },
+  { id: 5, image: '/images/projects/5.png', category: 'automation', year: '1397' },
+  { id: 6, image: '/images/projects/6.png', category: 'substations', year: '1397' },
+  { id: 7, image: '/images/projects/7.png', category: 'transmission', year: '1397' },
+  { id: 8, image: '/images/projects/8.png', category: 'pelletizing', year: '1397' },
+  { id: 9, image: '/images/projects/9.png', category: 'automation', year: '1392' },
+  { id: 10, image: '/images/projects/10.png', category: 'substations', year: '1392' },
+  { id: 11, image: '/images/projects/11.png', category: 'epc', year: '1391' },
+  { id: 12, image: '/images/projects/12.png', category: 'transmission', year: '1392' },
+  { id: 13, image: '/images/projects/13.png', category: 'pelletizing', year: '1388' },
+  { id: 14, image: '/images/projects/14.png', category: 'automation', year: '1391' },
+  { id: 15, image: '/images/projects/15.png', category: 'substations', year: '1383' },
+  { id: 16, image: '/images/projects/16.png', category: 'transmission', year: '1387' },
+  { id: 17, image: '/images/projects/17.png', category: 'epc', year: '1385' },
+  { id: 18, image: '/images/projects/18.png', category: 'pelletizing', year: '1385' },
+  { id: 19, image: '/images/projects/19.png', category: 'automation', year: '1382' },
+  { id: 20, image: '/images/projects/20.png', category: 'substations', year: '1389' },
+  { id: 21, image: '/images/projects/21.png', category: 'transmission', year: '1380' },
+  { id: 22, image: '/images/projects/22.png', category: 'pelletizing', year: '1386' },
+  { id: 23, image: '/images/projects/23.png', category: 'epc', year: '1382' },
+  { id: 24, image: '/images/projects/24.png', category: 'automation', year: '1382' },
+  { id: 25, image: '/images/projects/25.png', category: 'substations', year: '1382' },
+  { id: 26, image: '/images/projects/26.png', category: 'transmission', year: '1382' },
+  { id: 27, image: '/images/projects/27.png', category: 'pelletizing', year: '1381' },
+  { id: 28, image: '/images/projects/28.png', category: 'epc', year: '1383' },
+  { id: 29, image: '/images/projects/29.png', category: 'automation', year: '1387' },
+  { id: 30, image: '/images/projects/30.png', category: 'substations', year: '1381' },
+  { id: 31, image: '/images/projects/31.png', category: 'transmission', year: '1385' },
+  { id: 32, image: '/images/projects/32.png', category: 'pelletizing', year: '1385' },
+  { id: 33, image: '/images/projects/33.png', category: 'epc', year: '1381' },
+  { id: 34, image: '/images/projects/34.png', category: 'automation', year: '1395' },
 ];
 
 const Projects: React.FC = () => {
@@ -31,13 +48,12 @@ const Projects: React.FC = () => {
 
   const projects = useMemo(() => {
     return projectMetadata.map(p => {
-      const key = p.id <= 11 ? `p${p.id}` : 'placeholder';
-      const options = p.id > 11 ? { id: p.id } : undefined;
+      const key = `p${p.id}`; // کلید ترجمه همیشه مطابق با p1 تا p34
       return {
         ...p,
-        title: t(`projectsData.${key}.title`, options),
-        description: t(`projectsData.${key}.description`, options),
-        location: t(`projectsData.${key}.location`, options),
+        title: t(`projectsData.${key}.title`),
+        description: t(`projectsData.${key}.description`),
+        location: t(`projectsData.${key}.location`),
       };
     });
   }, [i18n.language, t]);
@@ -48,6 +64,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      {/* بخش هدر */}
       <section className="relative py-20 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 dark:from-black dark:via-navy-950 dark:to-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -57,6 +74,7 @@ const Projects: React.FC = () => {
         </div>
       </section>
 
+      {/* فیلتر دسته‌بندی */}
       <section className="py-6 bg-white dark:bg-navy-950 sticky top-16 z-40 border-b border-gray-200 dark:border-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3 justify-center">
@@ -77,6 +95,7 @@ const Projects: React.FC = () => {
         </div>
       </section>
 
+      {/* پروژه‌ها */}
       <section className="py-20 bg-gray-50 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
