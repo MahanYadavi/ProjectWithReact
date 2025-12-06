@@ -234,7 +234,7 @@ const clients = [
       </section>
 
       {/* Clients Section */}
-<section className="py-16 bg-[#F8FAFC] dark:bg-[#1E2A47]">
+<section className="py-16 bg-[#F8FAFC] dark:bg-[#f4cf64]">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <motion.div
@@ -243,7 +243,7 @@ const clients = [
       viewport={{ once: true }}
       className="text-center mb-12"
     >
-      <h2 className="text-2xl md:text-3xl font-bold text-navy-900 dark:text-white mb-4">
+      <h2 className="text-2xl md:text-3xl font-bold text-navy-900 dark:text-black mb-4">
         {t('clients.title')}
       </h2>
     </motion.div>
