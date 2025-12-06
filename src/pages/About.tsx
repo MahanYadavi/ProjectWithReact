@@ -80,7 +80,7 @@ const About: React.FC = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/images/aboutUs.jpg"
+                src="/images/Banners/about.jpg"
                 alt="About Us"
                 className="rounded-2xl shadow-2xl"
               />
