@@ -22,8 +22,8 @@ const Home: React.FC = () => {
   };
 
   const introStats = [
-    { number: 25, suffix: '+', label: t('intro.stat1') },
-    { number: 100, suffix: '+', label: t('intro.stat2') },
+    { number: 15, suffix: '+', label: t('intro.stat1') },
+    { number: 80, suffix: '+', label: t('intro.stat2') },
     { number: 50, suffix: '+', label: t('intro.stat3') },
   ];
 
@@ -36,21 +36,7 @@ const Home: React.FC = () => {
     { icon: HardHat, title: t('services.epc'), description: t('services.epcDesc') },
   ];
 
-const clients = [
-  { name: 'Client 1', logo: '/images/Customers/fakkor.png' },
-  { name: 'Client 2', logo: '/images/Customers/folladMobarake.png' },
-  { name: 'Client 3', logo: '/images/Customers/folladTeknik.png' },
-  { name: 'Client 4', logo: '/images/Customers/mapna.png' },
-  { name: 'Client 5', logo: '/images/Customers/zoobahanEsfehan.png' },
-  { name: 'Client 6', logo: '/images/Customers/mashinsazi.png' },
-  { name: 'Client 7', logo: '/images/Customers/Shiraz.png' },
-  { name: 'Client 8', logo: '/images/Customers/folladkhozestan.png' },
-  { name: 'Client 9', logo: '/images/Customers/ToseeFolladJonob.png' },
-  { name: 'Client 10', logo: '/images/Customers/fooladnaztanz.png' }
-
-                                                                                                                                                                                         
-      
-];
+  const clients = ['Mobarakeh Steel', 'Chadormalu Mining', 'Gol Gohar', 'National Gas Co.', 'MAPNA Group', 'Khouzestan Steel'];
 
   const featuredProjects = [
     { id: 1, title: 'Golgohar Pelletizing Plant', image: '/images/projects/featured-1.jpg', category: 'Pelletizing' },
@@ -71,56 +57,50 @@ const clients = [
   ];
 
   const certifications = [
-    { name: 'ISO 9001', logo: '/images/certs/1.jpg' },
-    { name: 'ISO 14001', logo: '/images/certs/2.jpg' },
-    { name: 'OHSAS 18001', logo: '/images/certs/3.jpg' },
-    { name: 'HSE-MS', logo: '/images/certs/4.jpg' },
-    { name: 'Grade A Contractor', logo: '/images/certs/5.jpg' },
-    { name: 'NEMA Member', logo: '/images/certs/6.jpg' },
-    { name: 'NEMA Mem', logo: '/images/certs/7.jpg' },
-
+    { name: 'ISO 9001', logo: '/images/certs/iso9001.png' },
+    { name: 'ISO 14001', logo: '/images/certs/iso14001.png' },
+    { name: 'OHSAS 18001', logo: '/images/certs/ohsas18001.png' },
+    { name: 'HSE-MS', logo: '/images/certs/hse.png' },
+    { name: 'Grade A Contractor', logo: '/images/certs/grade-a.png' },
+    { name: 'NEMA Member', logo: '/images/certs/nema.png' },
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-<section className="relative h-screen flex items-center justify-center overflow-hidden">
-  {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-    <img
-      src="/images/Banners/main.png"
-      alt="Industrial Project"
-      className="w-full h-full object-cover filter blur-md"
-    />
-  </div>
-
-  {/* Content */}
-  <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <motion.div initial="hidden" animate="visible" variants={containerVariants}>
-      <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance">
-        {t('hero.title')}
-      </motion.h1>
-      <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto text-balance">
-        {t('hero.subtitle')}
-      </motion.p>
-      <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
-        <Link to="/projects" className="inline-flex items-center justify-center px-8 py-4 bg-gold-600 hover:bg-gold-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-gold-500/50 space-x-2 rtl:space-x-reverse">
-          <span>{t('hero.cta')}</span>
-          <ArrowRight className="w-5 h-5 rtl:rotate-180" />
-        </Link>
-        <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg backdrop-blur-sm border border-white/20 transition-all">
-          {t('hero.learnMore')}
-        </Link>
-      </motion.div>
-    </motion.div>
-  </div>
-
-  {/* Bottom Gradient (Optional for fade effect) */}
-  <div className="absolute bottom-0 left-0 right-0 z-20 h-24 bg-gradient-to-t from-white dark:from-navy-950 to-transparent"></div>
-</section>
-
-
-      
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <motion.div 
+            className="absolute inset-0 bg-gradient-to-r from-navy-900/90 to-navy-800/80 dark:from-black/80 dark:to-navy-950/90 z-10"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}
+          />
+          <motion.img
+            src="/images/hero-bg.jpg"
+            alt="Industrial Project" className="w-full h-full object-cover"
+            initial={{ scale: 1.1, filter: 'blur(4px)' }} animate={{ scale: 1, filter: 'blur(0px)' }} transition={{ duration: 10, ease: "linear" }}
+          />
+        </div>
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div initial="hidden" animate="visible" variants={containerVariants}>
+            <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance">
+              {t('hero.title')}
+            </motion.h1>
+            <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto text-balance">
+              {t('hero.subtitle')}
+            </motion.p>
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/projects" className="inline-flex items-center justify-center px-8 py-4 bg-gold-600 hover:bg-gold-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-gold-500/50 space-x-2 rtl:space-x-reverse">
+                <span>{t('hero.cta')}</span>
+                <ArrowRight className="w-5 h-5 rtl:rotate-180" />
+              </Link>
+              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg backdrop-blur-sm border border-white/20 transition-all">
+                {t('hero.learnMore')}
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 z-20 h-24 bg-gradient-to-t from-white dark:from-navy-950 to-transparent"></div>
+      </section>
 
       {/* Intro Section */}
       <section className="py-20 bg-white dark:bg-navy-950">
@@ -206,7 +186,7 @@ const clients = [
               </div>
             </motion.div>
             <motion.div className="lg:order-first" initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <motion.img src="/images/Banners/whyUs.jpg" alt="Why Choose Us" className="rounded-2xl shadow-2xl" whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }} />
+              <motion.img src="/images/why-us-engineer.jpg" alt="Why Choose Us" className="rounded-2xl shadow-2xl" whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }} />
             </motion.div>
           </div>
         </div>
@@ -236,53 +216,60 @@ const clients = [
       </section>
 
       {/* Clients Section */}
-<section className="py-16 bg-[#F8FAFC] dark:bg-[#f4cf64]">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-white dark:bg-navy-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-navy-900 dark:text-white mb-4">{t('clients.title')}</h2>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {clients.map((client, index) => (
+              <motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="flex items-center justify-center p-4">
+                <span className="text-lg font-semibold text-gray-500 dark:text-gray-400 text-center grayscale hover:grayscale-0 transition-all">{client}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="text-center mb-12"
-    >
-      <h2 className="text-2xl md:text-3xl font-bold text-navy-900 dark:text-black mb-4">
-        {t('clients.title')}
-      </h2>
-    </motion.div>
-
-    {/* ثابت: 5 ستون، 2 ردیف */}
-    <div className="grid grid-cols-5 gap-12 place-items-center">
-      {clients.slice(0, 10).map((client, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            delay: index * 0.05,
-            duration: 0.4,
-            type: "spring",
-            stiffness: 120
-          }}
-          className="flex items-center justify-center w-32 h-20"
-        >
-          <motion.img
-            src={client.logo}
-            alt={client.name}
-            className="w-full h-full object-contain"
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 200 }}
-          />
-        </motion.div>
-      ))}
-    </div>
-
-  </div>
-</section>
-
-
-
+      {/* Certifications Section */}
+      <section className="py-20 bg-gray-50 dark:bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
+                <h2 className="text-3xl font-bold text-navy-900 dark:text-white mb-4">{t('certifications.title')}</h2>
+                <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">{t('certifications.description')}</p>
+            </motion.div>
+            <motion.div 
+              className="w-full overflow-hidden relative"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-gray-50 dark:from-black to-transparent z-10"></div>
+              <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-gray-50 dark:from-black to-transparent z-10"></div>
+              <motion.div 
+                className="flex"
+                animate={{
+                  x: ['0%', '-100%'],
+                  transition: {
+                    ease: 'linear',
+                    duration: 30,
+                    repeat: Infinity,
+                  }
+                }}
+              >
+                {[...certifications, ...certifications].map((cert, index) => (
+                  <div key={index} className="flex-shrink-0 w-1/3 md:w-1/4 lg:w-1/6 p-4 flex items-center justify-center">
+                    <img 
+                      src={cert.logo} 
+                      alt={cert.name} 
+                      className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+                    />
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+        </div>
+      </section>
     </div>
   );
 };
-export default Home;
