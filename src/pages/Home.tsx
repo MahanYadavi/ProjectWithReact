@@ -71,12 +71,14 @@ const clients = [
   ];
 
   const certifications = [
-    { name: 'ISO 9001', logo: '/images/certs/iso9001.png' },
-    { name: 'ISO 14001', logo: '/images/certs/iso14001.png' },
-    { name: 'OHSAS 18001', logo: '/images/certs/ohsas18001.png' },
-    { name: 'HSE-MS', logo: '/images/certs/hse.png' },
-    { name: 'Grade A Contractor', logo: '/images/certs/grade-a.png' },
-    { name: 'NEMA Member', logo: '/images/certs/nema.png' },
+    { name: 'ISO 9001', logo: '/images/certs/1.jpg' },
+    { name: 'ISO 14001', logo: '/images/certs/2.jpg' },
+    { name: 'OHSAS 18001', logo: '/images/certs/3.jpg' },
+    { name: 'HSE-MS', logo: '/images/certs/4.jpg' },
+    { name: 'Grade A Contractor', logo: '/images/certs/5.jpg' },
+    { name: 'NEMA Member', logo: '/images/certs/6.jpg' },
+    { name: 'NEMA Mem', logo: '/images/certs/7.jpg' },
+
   ];
 
   return (
@@ -281,44 +283,48 @@ const clients = [
 
 
       {/* Certifications Section */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
-                <h2 className="text-3xl font-bold text-navy-900 dark:text-white mb-4">{t('certifications.title')}</h2>
-                <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">{t('certifications.description')}</p>
-            </motion.div>
-            <motion.div 
-              className="w-full overflow-hidden relative"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-            >
-              <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-gray-50 dark:from-black to-transparent z-10"></div>
-              <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-gray-50 dark:from-black to-transparent z-10"></div>
-              <motion.div 
-                className="flex"
-                animate={{
-                  x: ['0%', '-100%'],
-                  transition: {
-                    ease: 'linear',
-                    duration: 30,
-                    repeat: Infinity,
-                  }
-                }}
-              >
-                {[...certifications, ...certifications].map((cert, index) => (
-                  <div key={index} className="flex-shrink-0 w-1/3 md:w-1/4 lg:w-1/6 p-4 flex items-center justify-center">
-                    <img 
-                      src={cert.logo} 
-                      alt={cert.name} 
-                      className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
-                    />
-                  </div>
-                ))}
-              </motion.div>
-            </motion.div>
-        </div>
-      </section>
+<section className="py-20 bg-gray-50 dark:bg-black">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-center"
+    >
+      <h2 className="text-3xl font-bold text-navy-900 dark:text-white mb-4">
+        {t('certifications.title')}
+      </h2>
+      <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
+        {t('certifications.description')}
+      </p>
+    </motion.div>
+
+    {/* SMOOTH MARQUEE */}
+    <div className="relative overflow-hidden">
+      <div className="flex gap-10 animate-marquee whitespace-nowrap">
+        {[...certifications, ...certifications].map((cert, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 flex items-center justify-center"
+          >
+            <img
+              src={cert.logo}
+              alt={cert.name}
+                className="
+    h-40 sm:h-52 md:h-64 lg:h-72 
+    min-w-[140px] sm:min-w-[170px] md:min-w-[190px]
+    object-contain
+    grayscale hover:grayscale-0 
+    transition-all duration-300
+"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
