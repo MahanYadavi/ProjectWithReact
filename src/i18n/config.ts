@@ -7,9 +7,8 @@ const resources = {
       nav: {
         home: 'Home',
         about: 'About Us',
-        records: 'Records',
         projects: 'Projects',
-        services: 'Services',
+        services: 'Commerce',
         contact: 'Contact Us',
         cta: 'Request Cooperation',
         selectLanguage: 'Select Language'
@@ -170,9 +169,8 @@ const resources = {
       nav: {
         home: 'خانه',
         about: 'درباره ما',
-        records: 'بازرگانی',
         projects: 'پروژه‌ها',
-        services: 'خدمات',
+        services: 'بازرگانی',
         contact: 'تماس با ما',
         cta: 'درخواست همکاری',
         selectLanguage: 'انتخاب زبان'
