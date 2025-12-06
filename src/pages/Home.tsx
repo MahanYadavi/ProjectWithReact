@@ -68,19 +68,24 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <motion.div 
-            className="absolute inset-0 bg-gradient-to-r from-navy-900/90 to-navy-800/80 dark:from-black/80 dark:to-navy-950/90 z-10"
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}
-          />
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+  <div className="absolute inset-0 z-0 overflow-hidden">
+    <motion.div 
+      className="absolute inset-0 bg-gradient-to-r from-navy-900/90 to-navy-800/80 dark:from-black/80 dark:to-navy-950/90 z-10"
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1 }} 
+      transition={{ duration: 1 }} 
+    />
           <motion.img
             src="/images/hero-bg.jpg"
-            alt="Industrial Project" className="w-full h-full object-cover"
-            initial={{ scale: 1.1, filter: 'blur(4px)' }} animate={{ scale: 1, filter: 'blur(0px)' }} transition={{ duration: 10, ease: "linear" }}
-          />
+      alt="Industrial Project"
+      className="w-full h-full object-cover will-change-transform"
+      initial={{ opacity: 0.6 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}          />
         </div>
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
           <motion.div initial="hidden" animate="visible" variants={containerVariants}>
             <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance">
               {t('hero.title')}
@@ -99,7 +104,8 @@ const Home: React.FC = () => {
             </motion.div>
           </motion.div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 z-20 h-24 bg-gradient-to-t from-white dark:from-navy-950 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 right-0 z-20 h-24 bg-gradient-to-t from-white dark:from-navy-950 to-transparent"></div>
+
       </section>
 
       {/* Intro Section */}
