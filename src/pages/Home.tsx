@@ -35,7 +35,6 @@ const Home: React.FC = () => {
     { icon: Factory, title: t('services.pelletizing'), description: t('services.pelletizingDesc') },
     { icon: HardHat, title: t('services.epc'), description: t('services.epcDesc') },
   ];
-
 const clients = [
   { name: 'Client 1', logo: '/images/Customers/fakkor.png' },
   { name: 'Client 2', logo: '/images/Customers/folladMobarake.png' },
@@ -287,6 +286,47 @@ const clients = [
           </div>
         </div>
       </section>
+      <section className="py-20 bg-gray-50 dark:bg-black">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-center"
+    >
+      <h2 className="text-3xl font-bold text-navy-900 dark:text-white mb-4">
+        {t('certifications.title')}
+      </h2>
+      <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
+        {t('certifications.description')}
+      </p>
+    </motion.div>
+
+    {/* SMOOTH MARQUEE */}
+    <div className="relative overflow-hidden">
+      <div className="flex gap-10 animate-marquee whitespace-nowrap">
+        {[...certifications, ...certifications].map((cert, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 flex items-center justify-center"
+          >
+            <img
+              src={cert.logo}
+              alt={cert.name}
+                className="
+    h-40 sm:h-52 md:h-64 lg:h-72 
+    min-w-[140px] sm:min-w-[170px] md:min-w-[190px]
+    object-contain
+    grayscale hover:grayscale-0 
+    transition-all duration-300
+"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   );
 };
