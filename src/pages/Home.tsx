@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Network, Flame, Cpu, Factory, HardHat, CheckCircle, Award, Users, GitBranch } from 'lucide-react';
 import Counter from '../components/Counter';
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 const Home: React.FC = () => {
   const { t } = useTranslation();
 
@@ -70,13 +71,13 @@ const clients = [
   ];
 
   const certifications = [
-    { name: 'ISO 9001', logo: '/images/certs/1.jpg' },
-    { name: 'ISO 14001', logo: '/images/certs/2.jpg' },
-    { name: 'OHSAS 18001', logo: '/images/certs/3.jpg' },
-    { name: 'HSE-MS', logo: '/images/certs/4.jpg' },
-    { name: 'Grade A Contractor', logo: '/images/certs/5.jpg' },
-    { name: 'NEMA Member', logo: '/images/certs/6.jpg' },
-    { name: 'NEMA Mem', logo: '/images/certs/7.jpg' },
+  { name: 'Cert 1', logo: '/images/certs/1.jpg' },
+  { name: 'Cert 2', logo: '/images/certs/2.jpg' },
+  { name: 'Cert 3', logo: '/images/certs/3.jpg' },
+  { name: 'Cert 4', logo: '/images/certs/4.jpg' },
+  { name: 'Cert 5', logo: '/images/certs/5.jpg' },
+  { name: 'Cert 6', logo: '/images/certs/6.jpg' },
+  { name: 'Cert 7', logo: '/images/certs/7.jpg' },
 
   ];
 
@@ -286,47 +287,46 @@ const clients = [
           </div>
         </div>
       </section>
-      <section className="py-20 bg-gray-50 dark:bg-black">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="text-center"
-    >
-      <h2 className="text-3xl font-bold text-navy-900 dark:text-white mb-4">
-        {t('certifications.title')}
-      </h2>
-      <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-        {t('certifications.description')}
-      </p>
-    </motion.div>
+         <section className="py-20 bg-gray-50 dark:bg-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    {/* SMOOTH MARQUEE */}
-    <div className="relative overflow-hidden">
-      <div className="flex gap-10 animate-marquee whitespace-nowrap">
-        {[...certifications, ...certifications].map((cert, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 flex items-center justify-center"
-          >
-            <img
-              src={cert.logo}
-              alt={cert.name}
-                className="
-    h-40 sm:h-52 md:h-64 lg:h-72 
-    min-w-[140px] sm:min-w-[170px] md:min-w-[190px]
-    object-contain
-    grayscale hover:grayscale-0 
-    transition-all duration-300
-"
-            />
-          </div>
-        ))}
+        {/* TITLE */}
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold text-navy-900 dark:text-white">
+            {t("certifications.title")}
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+            {t("certifications.description")}
+          </p>
+        </div>
+
+        {/* CAROUSEL */}
+        <Swiper
+          spaceBetween={30}
+          loop={true}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+        >
+          {certifications.map((cert, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">
+                <img
+                  src={cert.logo}
+                  alt={cert.name}
+                  className="w-full h-auto object-contain rounded-xl"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  );
     </div>
   );
 };
