@@ -53,7 +53,7 @@ const clients = [
 ];
 
   const featuredProjects = [
-    { id: 1, title: 'Golgohar Pelletizing Plant', image: '/images/projects/featured-1.jpg', category: 'Pelletizing' },
+    { id: 1, title: 'گندله سازی خرامه', image: '/images/index/temp1.png', category: '' },
     { id: 2, title: '400kV Substation - Isfahan', image: '/images/projects/featured-2.jpg', category: 'Substations' },
     { id: 3, title: 'South Pars Gas Field Automation', image: '/images/projects/featured-3.jpg', category: 'Automation' },
   ];
@@ -88,7 +88,7 @@ const clients = [
   {/* Background Image */}
   <div className="absolute inset-0 z-0">
     <img
-      src="/images/Banners/main.png"
+      src="/images/Banners/temp12.jpeg"
       alt="Industrial Background"
       className="w-full h-full object-cover filter blur-[2px] brightness-50"
     />
@@ -207,7 +207,7 @@ const clients = [
             </motion.div>
             <motion.div className="lg:order-first" initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <motion.img 
-                src="https://img-wrapper.vercel.app/image?url=https://placehold.co/800x600/1e293b/FFF?text=Why+Us" 
+                src="/images/Banners/whyUs.jpg" 
                 alt="Why Choose Us" 
                 className="rounded-2xl shadow-2xl border-4 border-navy-800" 
                 whileHover={{ scale: 1.02 }} 

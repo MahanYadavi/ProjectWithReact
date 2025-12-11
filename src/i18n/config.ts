@@ -128,7 +128,7 @@ const resources = {
   industrial: 'Industrial Power',
   transmission: 'Transmission & Distribution',
   panels: 'Panels & Equipment',
-  infrastructure: 'Electrical Infrastructure'
+  infrastructure: 'Architecture & Civil'
 }
       },
       projectsData: {
@@ -290,7 +290,7 @@ const resources = {
           industrial: 'برق',
           transmission: 'انتقال و توزیع',
           panels: 'تابلو و تجهیزات',
-          infrastructure: 'زیرساخت الکتریکال',
+          infrastructure: 'معماری و سیویل',
         }
       },
       projectsData: {
@@ -472,12 +472,11 @@ const resources = {
         title: 'مشاريعنا',
         subtitle: 'استكشف محفظتنا من المشاريع الناجحة في مجال الكهرباء والغاز والصناعة',
         categories: {
-          all: 'الكل',
-          substations: 'المحطات الفرعية',
-          transmission: 'خطوط النقل',
-          pelletizing: 'تكوير الخام',
-          epc: 'EPC الصناعية',
-          automation: 'الأتمتة'
+            all: 'الكل',
+  industrial: 'الكهرباء',
+  transmission: 'النقل والتوزيع',
+  panels: 'لوحات وتجهيزات',
+  infrastructure: 'الهندسة المعمارية والمدنية',
         }
       },
       projectsData: {
