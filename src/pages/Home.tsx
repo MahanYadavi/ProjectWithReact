@@ -90,7 +90,7 @@ const clients = [
     <img
       src="/images/Banners/temp12.jpeg"
       alt="Industrial Background"
-      className="w-full h-full object-cover filter blur-[2px] brightness-50"
+  className="w-full h-full object-cover filter brightness-75"
     />
   </div>
 
@@ -207,7 +207,7 @@ const clients = [
             </motion.div>
             <motion.div className="lg:order-first" initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <motion.img 
-                src="/images/Banners/whyUs.jpg" 
+                src="/images/Banners/whyusSection.jpeg" 
                 alt="Why Choose Us" 
                 className="rounded-2xl shadow-2xl border-4 border-navy-800" 
                 whileHover={{ scale: 1.02 }} 
