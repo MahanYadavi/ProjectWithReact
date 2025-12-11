@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
     </p>
     <br></br>
     <p className="text-gray-600 dark:text-gray-400 inline-block" dir="ltr">
-      0912 024 1178
+      0998 230 2930
     </p>
   </div>
 </div>
