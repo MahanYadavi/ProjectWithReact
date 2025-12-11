@@ -85,39 +85,37 @@ const clients = [
     <div className="min-h-screen bg-white dark:bg-navy-950 text-navy-900 dark:text-white overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://img-wrapper.vercel.app/image?url=https://placehold.co/1920x1080/0f172a/FFFFFF?text=Industrial+Background"
-            alt="Industrial Project"
-            className="w-full h-full object-cover filter blur-[2px] brightness-50"
-          />
-        </div>
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="/images/Banners/main.png"
+      alt="Industrial Background"
+      className="w-full h-full object-cover filter blur-[2px] brightness-50"
+    />
+  </div>
 
-        {/* Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
-          <motion.div initial="hidden" animate="visible" variants={containerVariants}>
-            <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight">
-              {t('hero.title')}
-            </motion.h1>
-            <motion.p variants={itemVariants} className="text-lg md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto text-balance">
-              {t('hero.subtitle')}
-            </motion.p>
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link to="/projects" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-gold-600 hover:bg-gold-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-gold-500/50 space-x-2 rtl:space-x-reverse">
-                <span>{t('hero.cta')}</span>
-                <ArrowRight className="w-5 h-5 rtl:rotate-180" />
-              </Link>
-              <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg backdrop-blur-sm border border-white/20 transition-all">
-                {t('hero.learnMore')}
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
+  {/* Content */}
+  <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+    <motion.div initial="hidden" animate="visible" variants={containerVariants}>
+      <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight">
+        {t('hero.subtitle')}
+      </motion.h1>
+      <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <Link to="/projects" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-gold-600 hover:bg-gold-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-gold-500/50 space-x-2 rtl:space-x-reverse">
+          <span>{t('hero.cta')}</span>
+          <ArrowRight className="w-5 h-5 rtl:rotate-180" />
+        </Link>
+        <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg backdrop-blur-sm border border-white/20 transition-all">
+          {t('hero.learnMore')}
+        </Link>
+      </motion.div>
+    </motion.div>
+  </div>
 
-        {/* Bottom Gradient */}
-        <div className="absolute bottom-0 left-0 right-0 z-20 h-24 bg-gradient-to-t from-white dark:from-navy-950 to-transparent"></div>
-      </section>
+  {/* Bottom Gradient */}
+  <div className="absolute bottom-0 left-0 right-0 z-20 h-24 bg-gradient-to-t from-white dark:from-navy-950 to-transparent"></div>
+</section>
+
 
       {/* Intro Section */}
       <section className="py-16 md:py-20 bg-white dark:bg-navy-950">
@@ -246,7 +244,7 @@ const clients = [
       </section>
 
       {/* Clients Section */}
-      <section className="py-16 bg-[#F8FAFC] dark:bg-gold-500/10">
+      <section className="py-16 bg-[#F8FAFC] dark:bg-[#d4af37]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -263,26 +261,35 @@ const clients = [
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 place-items-center">
             {clients.slice(0, 10).map((client, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: index * 0.05,
-                  duration: 0.4,
-                  type: "spring",
-                  stiffness: 120
-                }}
-                className="flex items-center justify-center w-full max-w-[140px] aspect-[3/2] grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
-              >
-                <motion.img
-                  src={client.logo}
-                  alt={client.name}
-                  className="w-full h-full object-contain"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 200 }}
-                />
-              </motion.div>
+  key={index}
+  initial={{ opacity: 0, scale: 0.8 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ once: true }}
+  transition={{
+    delay: index * 0.05,
+    duration: 0.4,
+    type: "spring",
+    stiffness: 120
+  }}
+  className="
+    flex items-center justify-center 
+    w-full max-w-[140px] aspect-[3/2]
+    bg-transparent
+    rounded-xl
+    transition-all duration-300
+    hover:bg-yellow-400/20 
+    hover:shadow-lg
+  "
+>
+  <motion.img
+    src={client.logo}
+    alt={client.name}
+    className="w-full h-full object-contain"
+    whileHover={{ scale: 1.1 }}
+    transition={{ type: "spring", stiffness: 200 }}
+  />
+</motion.div>
+
             ))}
           </div>
         </div>
