@@ -110,7 +110,7 @@ const Contact: React.FC = () => {
                       {t('contact.email')}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400">info@mobanir.com</p>
-                    <p className="text-gray-600 dark:text-gray-400">support@mobanir.com</p>
+                    
                   </div>
                 </div>
 
