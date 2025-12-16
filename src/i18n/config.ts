@@ -154,18 +154,73 @@ const resources = {
         quickLinks: 'Quick Links',
         services: 'Services',
         rights: 'All rights reserved.',
+      },
+        commerce: {
+      main: {
+        title: "Our Core Services",
+        engineering: "Engineering procurement: Matching requests and equipment documents with supplier lists, providing deviation reports and replacements, and preparing technical datasheets.",
+        supplyIndustrial: "Supply of equipment for petrochemical, steel, rolling, cement and downstream industries and raw materials such as FeSi, FeMn, dolomite, lime, iron concentrate, and pellets.",
+        bulkMaterial: "Supply of general bulk material needed for industrial and civil projects.",
+        qualityControl: "Quality control, inspections during fabrication, inspection at source, quantity control, loading, and coordination with third-party inspection companies."
+      },
+      hexagons: {
+        electricity: "Electricity",
+        instrumentation: "Instrumentation",
+        specialAlloys: "Special Steel Alloys",
+        mechanicsPiping: "Mechanics & Piping",
+        qualityAssurance: "Quality Assurance",
+        warranty: "Warranty, Installation & Commissioning"
+      },
+      secondaryContent: {
+        title: "International & Domestic Supply",
+        items: [
+          "Supply of international goods with manufacturer certificates and customs documents.",
+          "Supply of domestic products as requested by manufacturers."
+        ]
       }
-      ,
+    },
+    header: {
+      title: "Industrial Procurement & Supply Engineering",
+      imageAlt: "Industrial Plant View"
+    }
+     },
       recordsPage: {
         title: 'Records',
         subtitle: 'Company records and past projects',
         intro: 'This page contains company records, key project summaries and historical information about our work.',
         note: 'Content coming soon.'
       }
-    }
   },
   fa: {
     translation: {
+        commerce: {
+      main: {
+        title: "خدمات اصلی ما",
+        engineering: "مهندسی خرید: تطابق درخواست و مدارک تجهیزات و لیست تامین کننده با محصولات تولید کنندگان و ارائه اختلاف (Deviation) و پیشنهاد جایگزین (Replacement) و تهیه دیتا شیت و جزئیات فنی (Technical Data Sheet).",
+        supplyIndustrial: "تامین تجهیزات صنایع پتروشیمی، فولاد، نورد، سیمان و صنایع پایین‌دستی و تهیه مواد اولیه از قبیل فروسیلیس (FeSi)، فرومنگنز (FeMn)، دولومیت، آهک (Lime)، کنستانتره آهن و گندله.",
+        bulkMaterial: "تامین اجناس عمومی Bulk Material مورد نیاز صنایع و پروژه‌های عمرانی و صنعتی.",
+        qualityControl: "کنترل کیفیت، بازرسی حین ساخت، بازرسی در مبدا، تهیه و کنترل تعداد و بارگیری و هماهنگی با شرکت‌های بازرسی شخص ثالث."
+      },
+      hexagons: {
+        electricity: "برق",
+        instrumentation: "ابزار دقیق",
+        specialAlloys: "آلیاژهای خاص فولادی",
+        mechanicsPiping: "مکانیک و پایپینگ",
+        qualityAssurance: "تضمین کیفیت",
+        warranty: "گارانتی، نصب و راه اندازی"
+      },
+      secondaryContent: {
+        title: "تامین کالاهای بین‌المللی و داخلی",
+        items: [
+          "تامین کالاهای بین المللی و ارائه گواهینامه‌ها و تاییدیه‌های تولید کننده و مدارک گمرکی.",
+          "تامین محصولات و اقلام داخلی مورد نیاز تولید کنندگان بر اساس تقاضاها و سفارشات."
+        ]
+      }
+    },
+    header: {
+      title: "مهندسی خرید و تامین کالاهای صنعتی",
+      imageAlt: "نمای کارخانه صنعتی"
+    },
       nav: {
         home: 'خانه',
         about: 'درباره ما',
@@ -351,6 +406,35 @@ const resources = {
   },
   ar: {
     translation: {
+        commerce: {
+      main: {
+        title: "خدماتنا الأساسية",
+        engineering: "الهندسة والشراء: مطابقة الطلبات ومستندات المعدات مع قوائم الموردين، تقديم تقارير الانحراف والاستبدال، وإعداد النشرات الفنية.",
+        supplyIndustrial: "توريد المعدات للصناعات البتروكيماوية، الصلب، الأسطوانات، الأسمنت والصناعات التابعة، وتوريد المواد الأولية مثل FeSi، FeMn، الدولوميت، الجير، مركزات الحديد والحبيبات.",
+        bulkMaterial: "توريد المواد العامة Bulk Material المطلوبة للصناعات والمشاريع المدنية والصناعية.",
+        qualityControl: "مراقبة الجودة، التفتيش أثناء التصنيع، التفتيش عند المصدر، مراقبة الكميات والتحميل والتنسيق مع شركات التفتيش الطرف الثالث."
+      },
+      hexagons: {
+        electricity: "الكهرباء",
+        instrumentation: "الأتمتة وأجهزة القياس",
+        specialAlloys: "سبائك فولاذية خاصة",
+        mechanicsPiping: "الميكانيكا والأنابيب",
+        qualityAssurance: "ضمان الجودة",
+        warranty: "الضمان، التركيب والتشغيل"
+      },
+      secondaryContent: {
+        title: "توريد دولي وداخلي",
+        items: [
+          "توريد السلع الدولية مع شهادات الشركة المصنعة والوثائق الجمركية.",
+          "توريد المنتجات المحلية حسب طلبات الشركات المصنعة."
+        ]
+      }
+    },
+    header: {
+      title: "هندسة الشراء وتوريد المعدات الصناعية",
+      imageAlt: "منظر المصنع الصناعي"
+    }
+  },
       nav: {
         home: 'الرئيسية',
         about: 'من نحن',
@@ -511,7 +595,6 @@ const resources = {
         note: 'المحتوى قيد الإعداد.'
       }
     }
-  }
 };
 
 i18n
