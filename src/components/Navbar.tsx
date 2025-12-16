@@ -58,8 +58,10 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse group">
-            <Zap className="w-8 h-8 text-gold-600 dark:text-gold-400 relative z-10" />
-            <Logo className="h-8 sm:h-9 md:h-10 lg:h-12" src="/images/Logo.png" alt="PowerFlow" />
+          <Logo 
+          className="h-10 sm:h-11 md:h-12 lg:h-14"  // لوگو بزرگ‌تر شد
+          src="/images/Logo.png" 
+        />
           </Link>
 
           {/* Desktop Nav Links */}

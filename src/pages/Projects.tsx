@@ -8,7 +8,7 @@ const categories = ['all', 'industrial', 'transmission', 'panels', 'infrastructu
 const projectMetadata = [
   { id: 1, image: '/images/projects/1.png', category: 'infrastructure', year: '1380' },
   { id: 2, image: '/images/projects/2.png', category: 'industrial', year: '1398' },
-  { id: 3, image: '/images/projects/3.jpg', category: 'industrial', year: '1402' },
+  { id: 3, image: '/images/projects/3.jpg', category: 'industrial', year: '1400' },
   { id: 4, image: '/images/projects/4.png', category: 'industrial', year: '1402' },
   { id: 5, image: '/images/projects/5.png', category: 'infrastructure', year: '1397' },
   { id: 6, image: '/images/projects/6.png', category: 'infrastructure', year: '1397' },
@@ -25,7 +25,7 @@ const projectMetadata = [
   { id: 17, image: '/images/projects/17.png', category: 'industrial', year: '1385' },
   { id: 18, image: '/images/projects/18.png', category: 'industrial', year: '1385' },
   { id: 19, image: '/images/projects/19.png', category: 'industrial', year: '1382' },
-  { id: 20, image: '/images/projects/20.png', category: 'transmission', year: '1389' },
+  // { id: 20, image: '/images/projects/20.png', category: 'transmission', year: '1389' },
   { id: 21, image: '/images/projects/21.png', category: 'industrial', year: '1380' },
   { id: 22, image: '/images/projects/22.png', category: 'industrial', year: '1386' },
   { id: 23, image: '/images/projects/23.png', category: 'infrastructure', year: '1382' },
