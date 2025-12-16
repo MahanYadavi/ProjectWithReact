@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse group">
           <Logo 
-          className="h-10 sm:h-11 md:h-12 lg:h-14"  // لوگو بزرگ‌تر شد
+          className="h-12 sm:h-14 md:h-16 lg:h-18"  // بزرگ‌تر روی موبایل
           src="/images/Logo.png" 
         />
           </Link>
