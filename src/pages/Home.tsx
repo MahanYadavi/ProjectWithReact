@@ -5,7 +5,10 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Network, Flame, Cpu, Factory, HardHat, CheckCircle, Award, Users, GitBranch } from 'lucide-react';
 import Counter from '../components/Counter';
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import { Autoplay } from "swiper";
+import "swiper/css"; // حتما CSS اصلی
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 const Home: React.FC = () => {
   const { t } = useTranslation();
 
@@ -294,45 +297,51 @@ const clients = [
           </div>
         </div>
       </section>
-         <section className="py-20 bg-gray-50 dark:bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gray-50 dark:bg-black">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    {/* TITLE */}
+    <div className="text-center mb-14">
+      <h2 className="text-4xl font-bold text-navy-900 dark:text-white">
+        {t("certifications.title")}
+      </h2>
+      <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+        {t("certifications.description")}
+      </p>
+    </div>
 
-        {/* TITLE */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-navy-900 dark:text-white">
-            {t("certifications.title")}
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
-            {t("certifications.description")}
-          </p>
-        </div>
-
-        {/* CAROUSEL */}
-        <Swiper
-          spaceBetween={30}
-          loop={true}
-          breakpoints={{
-            0: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
-          }}
-        >
-          {certifications.map((cert, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">
-                <img
-                  src={cert.logo}
-                  alt={cert.name}
-                  className="w-full h-auto object-contain rounded-xl"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
+    {/* CAROUSEL */}
+    <Swiper
+  spaceBetween={30}
+  loop={true} // لوپ بینهایت
+  autoplay={{
+    delay: 1500, // زمان کمتر بین اسلایدها (1.5 ثانیه)
+    disableOnInteraction: false,
+  }}
+  breakpoints={{
+    0: { slidesPerView: 1 },
+    640: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+    1280: { slidesPerView: 4 },
+  }}
+  modules={[Autoplay]}
+>
+  {certifications.map((cert, index) => (
+    <SwiperSlide key={index}>
+      <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">
+        <img
+          src={cert.logo}
+          alt={cert.name}
+          className="w-full h-auto object-contain rounded-xl"
+        />
       </div>
-    </section>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
+
+  </div>
+</section>
   );
     </div>
   );
