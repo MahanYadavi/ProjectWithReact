@@ -169,7 +169,7 @@ const resources = {
         specialAlloys: "Special Steel Alloys",
         mechanicsPiping: "Mechanics & Piping",
         qualityAssurance: "Quality Assurance",
-        warranty: "Warranty, Installation & Commissioning"
+        warranty: "Warranty & Installation"
       },
       secondaryContent: {
         title: "International & Domestic Supply",
