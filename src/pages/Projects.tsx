@@ -6,7 +6,7 @@ import { MapPin, Calendar, Tag } from 'lucide-react';
 const categories = ['all', 'industrial', 'transmission', 'panels', 'infrastructure'];
 
 const projectMetadata = [
-  { id: 1, image: '/images/projects/1.png', category: 'infrastructure', year: '1397' },
+  { id: 1, image: '/images/projects/1.png', category: 'industrial', year: '1397' },
   { id: 2, image: '/images/projects/2.png', category: 'transmission', year: '1398' },
   { id: 3, image: '/images/projects/3.jpg', category: 'industrial', year: '1400' },
   { id: 4, image: '/images/projects/4.png', category: 'industrial', year: '1402' },
@@ -18,7 +18,7 @@ const projectMetadata = [
   { id: 10, image: '/images/projects/10.png', category: 'transmission', year: '1392' },
   { id: 11, image: '/images/projects/11.png', category: 'transmission', year: '1391' },
   { id: 12, image: '/images/projects/12.png', category: 'transmission', year: '1392' },
-  { id: 13, image: '/images/projects/13.png', category: 'transmission', year: '1388' },
+  { id: 13, image: '/images/projects/13.png', category: 'industrial', year: '1388' },
   { id: 14, image: '/images/projects/14.png', category: 'transmission', year: '1391' },
   { id: 15, image: '/images/projects/15.png', category: 'industrial', year: '1383' },
   { id: 16, image: '/images/projects/16.png', category: 'industrial', year: '1387' },
