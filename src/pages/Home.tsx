@@ -58,7 +58,7 @@ const clients = [
     { id: 2, title: 'مجتمع صنعتی فولاد و  ذوب آهن نطنز', image: '/images/index/NatanzZobAhan.jpg', category: 'برق و ابزار دقیق' },
     { id: 3, title: 'پست برق شهرستان نطنز', image: '/images/index/post.jpg',category:'برق و ابزار دقیق' },
     { id: 4, title: 'مجتمع صنعتی فولاد پاسارگاد شیراز', image: '/images/index/Foolad.jpg', category: 'برق و ابزار دقیق' },
-    { id: 5, title: 'مجتمع معدنی معدنی تغلیظ مس جانجا', image: '/images/index/janja.jpeg', category: 'صنعتی' },
+    { id: 5, title: 'مجتمع معدنی تغلیظ مس جانجا', image: '/images/index/janja.jpeg', category: 'صنعتی' },
     { id: 6, title: 'مجتمع صنعتی ذوب آهن البرز ناب آرش', image: '/images/index/Arash.jpg', category: 'برق و ابزار دقیق' },
 
   ];
