@@ -52,7 +52,7 @@ const resources = {
         year: 'Year',
       },
       whyUs: {
-        title: 'Why Partner with PowerFlow?',
+        title: 'Why Partner with Behin Avaran Niroo?',
         item1: 'High execution capacity for heavy-duty projects',
         item2: 'Compliance with global standards (IEC, NEMA, NFPA)',
         item3: 'Dedicated team of specialized engineers',
