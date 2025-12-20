@@ -13,9 +13,9 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2 rtl:space-x-reverse">
             </div>
-            <p className="text-gray-400 text-sm">
+            {/* <p className="text-gray-400 text-sm">
               {t('footer.description')}
-            </p>
+            </p> */}
             <div className="flex space-x-4 rtl:space-x-reverse">
               <a href="#" className="text-gray-400 hover:text-gold-500 transition-colors">
                 <Facebook className="w-5 h-5" />
@@ -48,10 +48,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>{t('services.electrical')}</li>
               <li>{t('services.substations')}</li>
-              <li>{t('services.gas')}</li>
               <li>{t('services.automation')}</li>
               <li>{t('services.pelletizing')}</li>
-              <li>{t('services.epc')}</li>
             </ul>
           </div>
 
