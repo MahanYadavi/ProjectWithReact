@@ -32,12 +32,10 @@ const Home: React.FC = () => {
   ];
 
   const services = [
-    { icon: Zap, title: t('services.electrical'), description: t('services.electricalDesc') },
-    { icon: Network, title: t('services.substations'), description: t('services.substationsDesc') },
-    { icon: Flame, title: t('services.gas'), description: t('services.gasDesc') },
-    { icon: Cpu, title: t('services.automation'), description: t('services.automationDesc') },
-    { icon: Factory, title: t('services.pelletizing'), description: t('services.pelletizingDesc') },
-    { icon: HardHat, title: t('services.epc'), description: t('services.epcDesc') },
+    { icon: Zap, title: t('services.electrical'), description: '' },
+    { icon: Network, title: t('services.substations'), description: '' },
+    { icon: Cpu, title: t('services.automation'), description: '' },
+    { icon: Factory, title: t('services.pelletizing'), description:'' },
   ];
 const clients = [
   { name: 'Client 1', logo: '/images/Customers/fakkor.png' },
@@ -60,7 +58,7 @@ const clients = [
     { id: 2, title: 'مجتمع صنعتی فولاد و  ذوب آهن نطنز', image: '/images/index/NatanzZobAhan.jpg', category: 'برق و ابزار دقیق' },
     { id: 3, title: 'پست برق شهرستان نطنز', image: '/images/index/post.jpg',category:'برق و ابزار دقیق' },
     { id: 4, title: 'مجتمع صنعتی فولاد پاسارگاد شیراز', image: '/images/index/Foolad.jpg', category: 'برق و ابزار دقیق' },
-    { id: 5, title: 'مجتمع تغلیظ مس جانجا', image: '/images/index/janja.jpeg', category: 'صنعتی' },
+    { id: 5, title: 'مجتمع معدنی معدنی تغلیظ مس جانجا', image: '/images/index/janja.jpeg', category: 'صنعتی' },
     { id: 6, title: 'مجتمع صنعتی ذوب آهن البرز ناب آرش', image: '/images/index/Arash.jpg', category: 'برق و ابزار دقیق' },
 
   ];

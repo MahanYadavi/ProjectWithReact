@@ -102,22 +102,22 @@ const resources = {
         valuesText: 'Integrity, Innovation, Safety, and Customer Satisfaction',
       },
       contact: {
-        title: 'Contact Us',
-        subtitle: 'Get in touch with our team',
-        name: 'Full Name',
-        email: 'Email Address',
-        phone: 'Phone Number',
-        message: 'Your Message',
-        send: 'Send Message',
-        info: 'Contact Information',
-        address: 'Address',
-        addressText: '123 Industrial Avenue, Business District',
-        formTitle: 'Send us a Message',
-        businessHours: {
-          title: 'Business Hours',
-          monFri: 'Monday - Friday: 8:00 AM - 6:00 PM',
-          saturday: 'Saturday: 9:00 AM - 2:00 PM',
-          sunday: 'Sunday: Closed',
+          title: "Contact Us",
+  subtitle: "Get in Touch",
+  name: "Full Name",
+  email: "Email Address",
+  phone: "Phone Number",
+  message: "Your Message",
+  send: "Send Message",
+  info: "Contact Information",
+  address: "Address",
+  addressText: "Unit 6, 3rd Floor, No. 2, Nikray Street, North Kazeroun Street, Mirdamad, Tehran, Iran",
+  formTitle: "Send Us a Message",
+  businessHours: {
+    title: "Business Hours",
+    monFri: "Saturday – Wednesday: 8:00 AM – 6:00 PM",
+    saturday: "Thursday: 9:00 AM – 2:00 PM",
+    sunday: "Friday: Closed"
         }
       },
       projectsPage: {
@@ -131,20 +131,44 @@ const resources = {
   infrastructure: 'Architecture & Civil'
 }
       },
-      projectsData: {
-        p1: { title: '400kV Substation Development in Isfahan', location: 'Isfahan, Iran', description: 'Design, engineering, and construction of a new 400/230kV GIS substation to enhance grid stability.' },
-        p2: { title: '230kV Transmission Line - Tehran to Qom', location: 'Tehran, Iran', description: 'Construction of a 150km double-circuit transmission line to improve power flow between major cities.' },
-        p3: { title: 'Chadormalu Pelletizing Plant Automation', location: 'Yazd, Iran', description: 'Complete automation and control system upgrade for the 5 MTPA pelletizing plant.' },
-        p4: { title: 'Mobarakeh Steel Mill EPC Project', location: 'Isfahan, Iran', description: 'EPC contract for the new continuous casting machine electrical and automation systems.' },
-        p5: { title: 'NEOM City Smart Grid Consulting', location: 'NEOM, KSA', description: 'Strategic consulting on the design of a resilient and futuristic smart grid.' },
-        p6: { title: '63/20kV Mobile Substation Delivery', location: 'Ahvaz, Iran', description: 'Fast-track deployment of a mobile substation for emergency power restoration and grid support.' },
-        p7: { title: '400kV OHTL Maintenance Project', location: 'Kerman, Iran', description: 'Comprehensive overhaul and maintenance of critical overhead transmission line assets.' },
-        p8: { title: 'Golgohar Pelletizing Plant Expansion', location: 'Kerman, Iran', description: 'Electrical and mechanical works for the expansion of the pelletizing production line.' },
-        p9: { title: 'Tabriz Petrochemical Automation Upgrade', location: 'Tabriz, Iran', description: 'DCS and ESD system modernization for the olefin unit.' },
-        p10: { title: 'Substation Automation System Upgrade', location: 'Mashhad, Iran', description: 'Retrofitting of a 230kV substation with modern SCADA and protection systems.' },
-        p11: { title: 'Sarcheshmeh Copper Complex EPC', location: 'Kerman, Iran', description: 'EPC for power distribution and control systems of the new smelter project.' },
-        placeholder: { title: 'Project Title {{id}}', location: 'Regional', description: 'This is a sample description for project number {{id}}, detailing the scope and impact of our work in the region.' }
-      },
+         projectsData: {
+      p1: { title: "Execution of Ladder & Cable Tray Systems in ASP, LF, and EAF Units (15 km)", location: "Abhar, Noorin Industrial Town", description: "Client: Alborz Nab Arash Steel Complex" },
+      p2: { title: "Execution of 33 kV Static Var Compensator (SVC) Unit", location: "Abhar, Noorin Industrial Town", description: "Client: Alborz Nab Arash Steel Complex" },
+      p3: { title: "Electrical & Instrumentation Execution for ASP Oxygen Production Unit", location: "Abhar, Noorin Industrial Town", description: "Client: Alborz Nab Arash Steel Complex" },
+      p4: { title: "Electrical & Instrumentation Execution for Melt Shop Units", location: "Abhar, Noorin Industrial Town", description: "Client: Alborz Nab Arash Steel Complex" },
+      p5: { title: "Installation of Earthing System (10 km)", location: "Abhar, Noorin Industrial Town", description: "Client: Alborz Gharb Complex" },
+      p6: { title: "Execution of 33 kV Ladder & Tray System in Utility Tunnel (8 km)", location: "Abhar, Noorin Industrial Town", description: "Client: Alborz Nab Arash Steel Complex" },
+      p7: { title: "Design & Engineering of Electrical Systems for FTP, CCM, LF, and EAF Units", location: "Abhar, Noorin Industrial Town", description: "Client: Alborz Gharb Complex" },
+      p8: { title: "Installation of MV & LV Switchboards", location: "Abhar, Noorin Industrial Town", description: "Client: Alborz Gharb Complex" },
+      p9: { title: "Electrical & Instrumentation System Execution", location: "Shiraz, Kavar", description: "Client: Pasargad Steel Industrial Complex" },
+      p10:{ title: "Execution of SVC Unit", location: "Shiraz, Jahrom", description: "Client: Pasargad Steel Industrial Complex" },
+      p11:{ title: "Execution of 230/33 kV Substation", location: "Natanz, Shojaabad Industrial Town", description: "Client: Natanz Steel & Iron Company" },
+      p12:{ title: "Execution of 63/20 kV Substation", location: "Natanz, Shojaabad Industrial Town", description: "Client: Natanz Steel & Iron Company" },
+      p13:{ title: "Electrical Execution of the Largest Hot Rolling Rebar Coil Line in the Middle East", location: "Natanz, Shojaabad Industrial Town", description: "Client: Natanz Steel Company" },
+      p14:{ title: "Execution of 33 kV XLPE Cables (400 & 500 mm²)", location: "Natanz, Shojaabad Industrial Town", description: "Client: Natanz Steel & Iron Company" },
+      p15:{ title: "Electrical Execution of 100-Ton Melting Hall", location: "Malayer, Hamedan", description: "Client: Dena Ekbatan Company" },
+      p16:{ title: "Complete Installation of Oxygen Plant", location: "Ahvaz, Khuzestan", description: "Client: Dena Ekbatan Company" },
+      p17:{ title: "Electrical Execution of Hot Rolling Line", location: "Eyvanekey, Tehran", description: "Client: Arianvard Amir Company" },
+      p18:{ title: "Electrical Execution of SMP2 Melting Line", location: "Natanz, Shojaabad Industrial Town", description: "Client: Natanz Steel Company" },
+      p19:{ title: "Electrical Execution of RM1 Hot Rolling Line", location: "Natanz, Shojaabad Industrial Town", description: "Client: Natanz Steel Company" },
+      p20:{ title: "Execution of Overhead & Underground Electrical Networks", location: "Kala Electric Company", description: "Client: Kala Electric Company" },
+      p21:{ title: "Electrical Execution of Cold Rolling Line", location: "Natanz, Shojaabad Industrial Town", description: "Client: Toukli Wire Industries" },
+      p22:{ title: "Electrical Execution of Cold Rolling Line", location: "Natanz, Shojaabad Industrial Town", description: "Client: Vara Sanat Shargh Company" },
+      p23:{ title: "Execution of Lighting System", location: "Natanz, Shojaabad Industrial Town", description: "Client: Natanz Steel & Iron Company" },
+      p24:{ title: "Switchboard Manufacturing", location: "Gotvand Dam, Dezful", description: "Client: Shahrazin Company" },
+      p25:{ title: "Manufacturing of 20 kV Cubicles", location: "Isfahan, Near Refinery", description: "Client: Isfahan Dairy Industries" },
+      p26:{ title: "Switchboard Manufacturing", location: "Asaluyeh", description: "Client: Tose’e Ehya" },
+      p27:{ title: "Manufacturing of 20 kV Switchboards", location: "Isfahan Refinery", description: "Client: Isfahan Refinery" },
+      p28:{ title: "Execution of 20 kV Overhead Network", location: "Natanz", description: "Client: Isfahan Industrial Towns Company" },
+      p29:{ title: "Development of 2 Bays at 63/20 kV Substation", location: "Natanz, Shojaabad Industrial Town", description: "Client: Natanz Steel Company" },
+      p30:{ title: "Execution of 20 kV Overhead Network", location: "Isfahan Province", description: "Client: Isfahan Electricity Distribution Company" },
+      p31:{ title: "Dismantling, Repair & Commissioning of 143 Units of 5.5 kV Switchboards", location: "Natanz, Shojaabad Industrial Town", description: "Client: Natanz Steel & Iron Company" },
+      p32:{ title: "Service, Repair, Testing & Commissioning of 60 Transformers (5.5 kV) – RM3 Line", location: "Natanz, Shojaabad Industrial Town", description: "Client: Natanz Steel & Iron Company" },
+      p33:{ title: "Manufacturing of 20 kV Switchboards", location: "Isfahan Refinery", description: "Client: Isfahan Refinery" },
+      p34:{ title: "Power Supply Project for Workers’ Accommodation", location: "Bahman Power District", description: "Client: Tehran Province Electricity Company" },
+      p35:{ title: "Janja Copper Concentration Plant Project", location: "South Khorasan Province", description: "Client: Fakoor Sanat Tehran Company" },
+      p36:{ title: "Kharameh Shiraz Pelletizing Complex", location: "Shiraz", description: "Client: Fakoor Sanat Tehran Company" }
+    },
       servicesPage: {
         title: 'Our Services',
         subtitle: 'Providing comprehensive, end-to-end solutions for complex industrial challenges.'
@@ -238,22 +262,23 @@ const resources = {
       },
       intro: {
         title: 'بیش از 25 سال تعالی صنعتی',
-        description: 'شرکت ما با بیش از ۲۵ سال تجربه در اجرای پروژه‌های صنعتی در حوزه‌های برق، ابزار دقیق، مکانیک، تأسیسات، سیویل و معماری، توانسته است همکاری با مجموعه‌های بزرگ صنعتی و معدنی کشور را در کارنامه خود ثبت کند.',
+        description: 'شرکت ما با بیش از ۲۵ سال تجربه در اجرای پروژه‌های صنعتی در حوزه‌های برق، ابزار دقیق، مکانیک، تأسیسات، سیویل و معماری، توانسته است همکاری با مجموعه‌های بزرگ صنعتی و معدنی کشور را در کارنامه خود ثبت کند.'
+,
         stat1: 'سال سابقه',
         stat2: 'پروژه موفق',
         stat3: 'مهندس متخصص'
       },
       services: {
         title: 'خدمات اصلی ما',
-        electrical: 'پروژه‌های برق صنعتی و ساختمانی',
+        electrical: 'پروژه‌های برق و ابزار دقیق',
         electricalDesc: 'طراحی تامین تجهیزات شبکه,عملیات ساختمانی,نصب و راه اندازی پست های توزیع و فوق توزیع برق',
-        substations: 'پست‌های برق و تابلوهای MV/LV',
-        substationsDesc: 'طراحی، مهندسی و اجرای پست‌های برق و تابلوهای کنترل.',
+        substations: 'پست های توزیع و فوق توزیع',
+        substationsDesc: '',
         gas: 'خطوط انتقال گاز',
         gasDesc: 'گازرسانی به صنایع و مجتمعهای مسکونی و نصب,جا به جایی و جمع آوری انشعابات پراکنده',
-        automation: 'اتوماسیون و ابزار دقیق',
+        automation: ' سیویل و معماری',
         automationDesc: 'پیاده‌سازی سیستم‌های اتوماسیون پیشرفته مبتنی بر PLC و ابزار دقیق.',
-        pelletizing: 'پروژه‌های کارخانه گندله‌سازی',
+        pelletizing: 'مکانیک و تاسیسات',
         pelletizingDesc: 'راهکارهای کلید در دست برای کارخانه‌های گندله‌سازی، از طراحی فرآیند تا اجرای مکانیکی و برقی.',
         epc: 'پروژه‌های EPC صنعتی',
         epcDesc: 'خدمات جامع EPC (مهندسی، تأمین، ساخت) برای صنایع معدنی و فولاد.',
@@ -383,6 +408,8 @@ const resources = {
         p32: { title: 'سرویس تعمیر , تست و راه اندازی 60 دستگاه ترانسی (5.5کیلوولت)خط نورد RM3', location: 'نطنز,شهرک صنعتی شجاع آباد', description: 'طرف قرارداد:شرکت فولاد و ذوب آهن نطنز' },
         p33: { title: 'ساخت تابلوهای 20 کیلوولت', location: 'اصفهان,پالایشگاه', description: 'طرف قرارداد:پالایشگاه اصفهان' },
         p34: { title: 'پروژه تامین برق اسکان کارگری', location: 'منطقه برق بهمن', description: 'طرف قرارداد:برق استان تهران' },
+        p35: { title: 'پروژه تغلیظ مجتمع مس جانجا', location: 'استان خراسان جنوبی', description: 'طرف قرارداد:شرکت فکور صنعت تهران' },
+        p36: { title: 'مجتمع گندله سازی خرامه شیراز', location: 'شیراز', description: 'طرف قرارداد:ن' },
 
       },
       servicesPage: {
@@ -405,8 +432,8 @@ const resources = {
     }
   },
   ar: {
-    translation: {
-        commerce: {
+  translation: {
+    commerce: {
       main: {
         title: "خدماتنا الأساسية",
         engineering: "الهندسة والشراء: مطابقة الطلبات ومستندات المعدات مع قوائم الموردين، تقديم تقارير الانحراف والاستبدال، وإعداد النشرات الفنية.",
@@ -430,173 +457,70 @@ const resources = {
         ]
       }
     },
+
     header: {
       title: "هندسة الشراء وتوريد المعدات الصناعية",
       imageAlt: "منظر المصنع الصناعي"
-    }
-  },
-      nav: {
-        home: 'الرئيسية',
-        about: 'من نحن',
-        records: 'السجلات',
-        projects: 'المشاريع',
-        services: 'الخدمات',
-        contact: 'اتصل بنا',
-        cta: 'طلب تعاون',
-        selectLanguage: 'اختر اللغة'
-      },
-      hero: {
-        title: 'تنفيذ متخصص لمشاريع الكهرباء والغاز وتكوير الخام على نطاق صناعي',
-        subtitle: 'من التصميم والهندسة إلى التنفيذ والتشغيل، نقدم التميز مع فريق من الخبراء والمعايير العالمية.',
-        cta: 'عرض المشاريع',
-        learnMore: 'احصل على استشارة فنية',
-      },
-      intro: {
-        title: 'أكثر من ١٥ عامًا من التميز الصناعي',
-        description: 'بفضل خبرتنا التي تزيد عن ١٥ عامًا في تنفيذ مشاريع EPC، وأنظمة الطاقة الصناعية، وخطوط نقل الغاز، ومصانع تكوير الخام، تمتلك شركتنا سجلاً حافلاً بالتعاون الناجح مع المجمعات الصناعية والتعدينية الكبرى.',
-        stat1: 'سنوات من الخبرة',
-        stat2: 'مشروع ناجح',
-        stat3: 'مهندس خبير'
-      },
-      services: {
-        title: 'خدماتنا الأساسية',
-        electrical: 'مشاريع الكهرباء الصناعية والمباني',
-        electricalDesc: 'تنفيذ أنظمة كهربائية للجهد العالي والمنخفض للمنشآت الصناعية والتجارية.',
-        substations: 'المحطات الفرعية ولوحات MV/LV',
-        substationsDesc: 'تصميم وهندسة وتنفيذ المحطات الكهربائية الفرعية ولوحات التحكم.',
-        gas: 'خطوط نقل الغاز',
-        gasDesc: 'تركيب واختبار وتشغيل خطوط أنابيب ومحطات الغاز الصناعية.',
-        automation: 'الأتمتة والأجهزة الدقيقة',
-        automationDesc: 'تنفيذ أنظمة أتمتة متقدمة قائمة على PLC وأنظمة أجهزة دقيقة.',
-        pelletizing: 'مشاريع مصانع تكوير الخام',
-        pelletizingDesc: 'حلول متكاملة لمصانع تكوير الخام، من تصميم العملية إلى التنفيذ الميكانيكي والكهربائي.',
-        epc: 'مشاريع EPC الصناعية',
-        epcDesc: 'خدمات شاملة للهندسة والمشتريات والبناء (EPC) لصناعات التعدين والصلب.',
-      },
-      clients: {
-        title: 'عملاؤنا وشركاؤنا الكرام',
-      },
-      projects: {
-        title: 'مشاريع مميزة',
-        viewAll: 'عرض جميع المشاريع',
-        category: 'الفئة',
-        location: 'الموقع',
-        year: 'السنة',
-      },
-      whyUs: {
-        title: 'لماذا تتعاون مع PowerFlow؟',
-        item1: 'قدرة تنفيذ عالية للمشاريع الثقيلة',
-        item2: 'الامتثال للمعايير العالمية (IEC, NEMA, NFPA)',
-        item3: 'فريق متخصص من المهندسين المتخصصين',
-        item4: 'الالتزام بتسليم المشاريع في الوقت المحدد',
-        item5: 'خبرة مثبتة في البيئات الصناعية القاسية',
-        item6: 'سلسلة توريد قوية للمعدات والمواد',
-      },
-      workflow: {
-        title: 'سير عمل مشاريعنا',
-        step1: 'تقييم الاحتياجات وزيارة الموقع',
-        step1Desc: 'نبدأ بفهم متطلباتك بدقة وإجراء تحليل شامل للموقع.',
-        step2: 'التصميم الهندسي والعرض الفني',
-        step2Desc: 'يقوم مهندسونا بإنشاء تصميم فني مفصل وعرض شامل للمشروع.',
-        step3: 'التنفيذ على نطاق كامل',
-        step3Desc: 'ندير جميع مراحل الشراء والبناء والتركيب بدقة.',
-        step4: 'الاختبار والتشغيل',
-        step4Desc: 'ينتهي المشروع باختبارات صارمة وتشغيل وتسليم نهائي.',
-      },
-      certifications: {
-        title: 'الشهادات والمعايير',
-        description: 'نلتزم بأعلى معايير الصناعة لضمان الجودة والسلامة والموثوقية في كل مشروع.'
-      },
-      about: {
-        title: 'من نحن',
-        subtitle: 'التميز في مقاولات الكهرباء والغاز',
-        description: 'مع أكثر من 15 عامًا من الخبرة، رسخنا أنفسنا كشركة رائدة في مقاولات الكهرباء والغاز. يقدم فريقنا من المحترفين المعتمدين حلولاً مبتكرة للمشاريع السكنية والتجارية والصناعية.',
-        story: {
-          title: 'قصتنا',
-          p2: 'من المشاريع السكنية إلى المنشآت الصناعية الكبيرة، نقدم الخبرة والتفاني والابتكار في كل تحد. التزامنا بالسلامة والجودة ورضا العملاء جعلنا شريكًا موثوقًا به في الصناعة.'
-        },
-        coreValues: {
-          title: 'قيمنا الأساسية',
-          excellence: 'التميز',
-          excellenceDesc: 'ملتزمون بتقديم أعلى مستويات الجودة في كل مشروع',
-          teamwork: 'العمل الجماعي',
-          teamworkDesc: 'نهج تعاوني مع محترفين ذوي خبرة',
-          innovation: 'الابتكار',
-          innovationDesc: 'استخدام أحدث التقنيات والأساليب',
-          integrity: 'النزاهة',
-          integrityDesc: 'صادقون وشفافون في جميع تعاملاتنا',
-        },
-        vision: 'رؤيتنا',
-        visionText: 'أن نكون أكثر شركة مقاولات كهرباء وغاز موثوقة ومبتكرة في المنطقة.',
-        mission: 'مهمتنا',
-        missionText: 'تقديم جودة استثنائية وسلامة وموثوقية في كل مشروع نقوم به.',
-        values: 'قيمنا',
-        valuesText: 'النزاهة والابتكار والسلامة ورضا العملاء',
-      },
-      contact: {
-        title: 'اتصل بنا',
-        subtitle: 'تواصل مع فريقنا',
-        name: 'الاسم الكامل',
-        email: 'عنوان البريد الإلكتروني',
-        phone: 'رقم الهاتف',
-        message: 'رسالتك',
-        send: 'إرسال الرسالة',
-        info: 'معلومات الاتصال',
-        address: 'العنوان',
-        addressText: '123 شارع الصناعي، المنطقة التجارية',
-        formTitle: 'أرسل لنا رسالة',
-        businessHours: {
-          title: 'ساعات العمل',
-          monFri: 'الاثنين - الجمعة: 8:00 صباحًا - 6:00 مساءً',
-          saturday: 'السبت: 9:00 صباحًا - 2:00 ظهرًا',
-          sunday: 'الأحد: مغلق',
-        }
-      },
-      projectsPage: {
-        title: 'مشاريعنا',
-        subtitle: 'استكشف محفظتنا من المشاريع الناجحة في مجال الكهرباء والغاز والصناعة',
-        categories: {
-            all: 'الكل',
-  industrial: 'الكهرباء',
-  transmission: 'النقل والتوزيع',
-  panels: 'لوحات وتجهيزات',
-  infrastructure: 'الهندسة المعمارية والمدنية',
-        }
-      },
-      projectsData: {
-        p1: { title: 'تطوير محطة فرعية 400 كيلوفولت في أصفهان', location: 'أصفهان، إيران', description: 'تصميم وهندسة وبناء محطة فرعية جديدة 400/230 كيلوفولت بنظام GIS لتعزيز استقرار الشبكة.' },
-        p2: { title: 'خط نقل 230 كيلوفولت - من طهران إلى قم', location: 'طهران، إيران', description: 'بناء خط نقل مزدوج الدائرة بطول 150 كم لتحسين تدفق الطاقة بين المدن الرئيسية.' },
-        p3: { title: 'أتمتة مصنع تكوير الخام في تشادورمالو', location: 'يزد، إيران', description: 'تحديث كامل لنظام الأتمتة والتحكم لمصنع تكوير الخام بطاقة 5 مليون طن سنويًا.' },
-        p4: { title: 'مشروع EPC لمصنع مباركه للصلب', location: 'أصفهان، إيران', description: 'عقد EPC للأنظمة الكهربائية والأتمتة لآلة الصب المستمر الجديدة.' },
-        p5: { title: 'استشارات الشبكة الذكية لمدينة نيوم', location: 'نيوم، المملكة العربية السعودية', description: 'استشارات استراتيجية حول تصميم شبكة ذكية مرنة ومستقبلية.' },
-        p6: { title: 'تسليم محطة فرعية متنقلة 63/20 كيلوفولت', location: 'الأهواز، إيران', description: 'نشر سريع لمحطة فرعية متنقلة لاستعادة الطاقة في حالات الطوارئ ودعم الشبكة.' },
-        p7: { title: 'مشروع صيانة خطوط النقل الهوائية 400 كيلوفولت', location: 'كرمان، إيران', description: 'إصلاح وصيانة شاملة لأصول خطوط النقل الهوائية الحيوية.' },
-        p8: { title: 'توسعة مصنع تكوير الخام في غلغهر', location: 'كرمان، إيران', description: 'الأعمال الكهربائية والميكانيكية لتوسيع خط إنتاج تكوير الخام.' },
-        p9: { title: 'تحديث أتمتة بتروكيماويات تبريز', location: 'تبريز، إيران', description: 'تحديث نظام DCS و ESD لوحدة الأولفين.' },
-        p10: { title: 'تحديث نظام أتمتة المحطات الفرعية', location: 'مشهد، إيران', description: 'تجديد محطة فرعية 230 كيلوفولت بأنظمة SCADA وحماية حديثة.' },
-        p11: { title: 'مشروع EPC لمجمع سرجشمه للنحاس', location: 'كرمان، إيران', description: 'EPC لأنظمة توزيع الطاقة والتحكم لمشروع المصهر الجديد.' },
-        placeholder: { title: 'عنوان المشروع {{id}}', location: 'إقليمي', description: 'هذا وصف نموذجي للمشروع رقم {{id}}، يوضح بالتفصيل نطاق وتأثير عملنا في المنطقة.' }
-      },
-      servicesPage: {
-        title: 'خدماتنا',
-        subtitle: 'نقدم حلولاً شاملة ومتكاملة للتحديات الصناعية المعقدة.'
-      },
-      footer: {
-        description: 'خدمات مقاولات الكهرباء والغاز والصناعة المهنية مع التميز والموثوقية.',
-        quickLinks: 'روابط سريعة',
-        services: 'الخدمات',
-        rights: 'جميع الحقوق محفوظة.',
-      }
-      ,
-      recordsPage: {
-        title: 'السجلات',
-        subtitle: 'سجلات الشركة والمشاريع السابقة',
-        intro: 'تحتوي هذه الصفحة على سجلات الشركة، وملخصات المشاريع الرئيسية، ومعلومات تاريخية عن أعمالنا.',
-        note: 'المحتوى قيد الإعداد.'
-      }
-    }
-};
+    },
 
+    nav: {
+      home: "الرئيسية",
+      about: "من نحن",
+      records: "السجلات",
+      projects: "المشاريع",
+      services: "الخدمات",
+      contact: "اتصل بنا",
+      cta: "طلب تعاون",
+      selectLanguage: "اختر اللغة"
+    },
+
+    hero: {
+      title: "تنفيذ متخصص لمشاريع الكهرباء والغاز وتكوير الخام على نطاق صناعي",
+      subtitle: "من التصميم والهندسة إلى التنفيذ والتشغيل، نقدم التميز مع فريق من الخبراء والمعايير العالمية.",
+      cta: "عرض المشاريع",
+      learnMore: "احصل على استشارة فنية"
+    },
+
+    intro: {
+      title: "أكثر من ١٥ عامًا من التميز الصناعي",
+      description: "بفضل خبرتنا التي تزيد عن ١٥ عامًا في تنفيذ مشاريع EPC، وأنظمة الطاقة الصناعية، وخطوط نقل الغاز، ومصانع تكوير الخام.",
+      stat1: "سنوات من الخبرة",
+      stat2: "مشروع ناجح",
+      stat3: "مهندس خبير"
+    },
+
+    services: {
+      title: "خدماتنا الأساسية",
+      electrical: "مشاريع الكهرباء الصناعية والمباني",
+      electricalDesc: "تنفيذ أنظمة كهربائية للجهد العالي والمنخفض.",
+      substations: "المحطات الفرعية ولوحات MV/LV",
+      substationsDesc: "تصميم وتنفيذ المحطات الكهربائية.",
+      gas: "خطوط نقل الغاز",
+      gasDesc: "تركيب واختبار وتشغيل خطوط الغاز.",
+      automation: "الأتمتة والأجهزة الدقيقة",
+      automationDesc: "تنفيذ أنظمة PLC والأجهزة الدقيقة.",
+      pelletizing: "مشاريع تكوير الخام",
+      pelletizingDesc: "حلول متكاملة لمصانع التكوير.",
+      epc: "مشاريع EPC الصناعية",
+      epcDesc: "خدمات EPC شاملة."
+    },
+
+    footer: {
+      description: "خدمات مقاولات الكهرباء والغاز والصناعة المهنية.",
+      quickLinks: "روابط سريعة",
+      services: "الخدمات",
+      rights: "جميع الحقوق محفوظة."
+    },
+
+    recordsPage: {
+      title: "السجلات",
+      subtitle: "سجلات الشركة والمشاريع السابقة",
+      intro: "معلومات تاريخية عن أعمالنا.",
+      note: "المحتوى قيد الإعداد."
+    }
+  }
+}
+}
 i18n
   .use(initReactI18next)
   .init({
