@@ -56,9 +56,13 @@ const clients = [
 ];
 
   const featuredProjects = [
-    { id: 1, title: 'گندله سازی خرامه', image: '/images/index/temp1.png', category: '' },
-    { id: 2, title: 'ذوب اهن نطنز', image: '/images/index/NatanzZobAhan.jpg', category: '' },
+    { id: 1, title: 'مجتمع گندله سازی خرامه شیراز', image: '/images/index/temp1.png', category: '' },
+    { id: 2, title: 'مجتمع صنعتی فولاد و  ذوب آهن نطنز', image: '/images/index/NatanzZobAhan.jpg', category: '' },
     { id: 3, title: 'پست برق نطنز', image: '/images/index/post.jpg',category:'' },
+    { id: 4, title: 'مجتمع صنعتی فولاد پاسارگاد شیراز', image: '/images/index/temp1.png', category: '' },
+    { id: 5, title: 'مجتمع تغلیظ مس جانجا', image: '/images/index/temp1.png', category: '' },
+    { id: 6, title: 'مجتمع صنعتی ذوب آهن البرز ناب آرش', image: '/images/index/temp1.png', category: '' },
+
   ];
 
   const whyChooseUsItems = [
