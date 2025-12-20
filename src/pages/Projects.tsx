@@ -41,7 +41,7 @@ const projectMetadata = [
   { id: 33, image: '/images/projects/33.png', category: 'panels', year: '1381' },
   { id: 34, image: '/images/projects/34.png', category: 'industrial', year: '1395' },
   { id: 35, image: '/images/index/janja.jpeg', category: 'infrastructure', year: '1403' },
-  { id: 36, image: '/images/index/Foolad.jpg', category: 'infrastructure', year: '1404' }
+  { id: 36, image: '/images/index/temp1.png', category: 'infrastructure', year: '1404' }
 
 ]
 
