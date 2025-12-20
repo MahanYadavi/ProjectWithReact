@@ -56,12 +56,12 @@ const clients = [
 ];
 
   const featuredProjects = [
-    { id: 1, title: 'مجتمع گندله سازی خرامه شیراز', image: '/images/index/temp1.png', category: '' },
-    { id: 2, title: 'مجتمع صنعتی فولاد و  ذوب آهن نطنز', image: '/images/index/NatanzZobAhan.jpg', category: '' },
-    { id: 3, title: 'پست برق نطنز', image: '/images/index/post.jpg',category:'' },
-    { id: 4, title: 'مجتمع صنعتی فولاد پاسارگاد شیراز', image: '/images/index/temp1.png', category: '' },
-    { id: 5, title: 'مجتمع تغلیظ مس جانجا', image: '/images/index/temp1.png', category: '' },
-    { id: 6, title: 'مجتمع صنعتی ذوب آهن البرز ناب آرش', image: '/images/index/temp1.png', category: '' },
+    { id: 1, title: 'مجتمع گندله سازی خرامه شیراز', image: '/images/index/temp1.png', category: 'معماری و سیویل' },
+    { id: 2, title: 'مجتمع صنعتی فولاد و  ذوب آهن نطنز', image: '/images/index/NatanzZobAhan.jpg', category: 'برق و ابزار دقیق' },
+    { id: 3, title: 'پست برق شهرستان نطنز', image: '/images/index/post.jpg',category:'برق و ابزار دقیق' },
+    { id: 4, title: 'مجتمع صنعتی فولاد پاسارگاد شیراز', image: '/images/index/Foolad.jpg', category: 'برق و ابزار دقیق' },
+    { id: 5, title: 'مجتمع تغلیظ مس جانجا', image: '/images/index/janja.jpeg', category: 'صنعتی' },
+    { id: 6, title: 'مجتمع صنعتی ذوب آهن البرز ناب آرش', image: '/images/index/Arash.jpg', category: 'برق و ابزار دقیق' },
 
   ];
 
@@ -179,7 +179,7 @@ const clients = [
                 <div className="aspect-[4/3] overflow-hidden">
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-900/50 to-transparent flex flex-col justify-end p-6 translate-y-2 group-hover:translate-y-0 transition-transform">
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-navy-900/30 to-transparent flex flex-col justify-end p-6 translate-y-2 group-hover:translate-y-0 transition-transform">
                   <span className="text-sm font-semibold text-gold-400 mb-1 uppercase tracking-wider">{project.category}</span>
                   <h3 className="text-xl font-bold text-white">{project.title}</h3>
                 </div>
