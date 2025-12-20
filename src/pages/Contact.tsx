@@ -32,9 +32,7 @@ const Contact: React.FC = () => {
   {/* تصویر بک‌گراند */}
   <div
     className="absolute inset-0 bg-cover bg-center"
-    style={{
-      backgroundImage: "url('/images/Logo.png')",
-    }}
+    style={{    }}
   ></div>
 
   {/* Overlay نیمه‌شفاف برای خوانایی متن */}

@@ -12,7 +12,7 @@ function Services() {
       {/* Header */}
       <div className="w-full h-48 md:h-64 lg:h-80 overflow-hidden relative bg-gray-900">
         <img
-          src="/images/Banners/Commerce.jpg"
+          src="/images/Palayeshgah.jpg"
           onError={(e) => {
             e.currentTarget.src =
               'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop';
