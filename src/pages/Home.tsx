@@ -80,9 +80,7 @@ const clients = [
   { name: 'Cert 2', logo: '/images/certs/2.jpg' },
   { name: 'Cert 3', logo: '/images/certs/3.jpg' },
   { name: 'Cert 4', logo: '/images/certs/4.jpg' },
-  { name: 'Cert 5', logo: '/images/certs/5.jpg' },
-  { name: 'Cert 6', logo: '/images/certs/6.jpg' },
-  { name: 'Cert 7', logo: '/images/certs/7.jpg' },
+  { name: 'Cert 5', logo: '/images/certs/5.jpg' }
 
   ];
 

@@ -47,9 +47,6 @@ const About: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               {t('about.title')}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-              {t('about.subtitle')}
-            </p>
           </motion.div>
         </div>
       </section>
@@ -68,9 +65,6 @@ const About: React.FC = () => {
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                 {t('about.description')}
-              </p>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {t('about.story.p2')}
               </p>
             </motion.div>
             <motion.div

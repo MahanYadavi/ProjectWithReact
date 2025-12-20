@@ -40,8 +40,8 @@ const projectMetadata = [
   { id: 32, image: '/images/projects/32.png', category: 'panels', year: '1385' },
   { id: 33, image: '/images/projects/33.png', category: 'panels', year: '1381' },
   { id: 34, image: '/images/projects/34.png', category: 'industrial', year: '1395' },
-  { id: 35, image: '/images/index/janja.jpeg', category: 'infrastructure', year: '1400' },
-  { id: 36, image: '/images/projects/Foolad.jpg', category: 'infrastructure', year: '1401' }
+  { id: 35, image: '/images/index/janja.jpeg', category: 'infrastructure', year: '1403' },
+  { id: 36, image: '/images/index/Foolad.jpg', category: 'infrastructure', year: '1404' }
 
 ]
 
@@ -73,7 +73,6 @@ const Projects: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{t('projectsPage.title')}</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('projectsPage.subtitle')}</p>
           </motion.div>
         </div>
       </section>
