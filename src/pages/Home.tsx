@@ -57,8 +57,8 @@ const clients = [
 
   const featuredProjects = [
     { id: 1, title: 'گندله سازی خرامه', image: '/images/index/temp1.png', category: '' },
-    { id: 2, title: '400kV Substation - Isfahan', image: '/images/projects/featured-2.jpg', category: 'Substations' },
-    { id: 3, title: 'South Pars Gas Field Automation', image: '/images/projects/featured-3.jpg', category: 'Automation' },
+    { id: 2, title: 'ذوب اهن نطنز', image: '/images/index/NatanzZobAhan.jpg', category: '' },
+    { id: 3, title: 'پست برق نطنز', image: '/images/index/post.jpg',category:'' },
   ];
 
   const whyChooseUsItems = [
