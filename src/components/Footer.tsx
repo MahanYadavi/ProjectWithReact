@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-navy-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; 2025 PowerFlow Contracting. {t('footer.rights')}</p>
+          <p>&copy; Mobanir {t('footer.rights')}</p>
         </div>
       </div>
     </footer>
