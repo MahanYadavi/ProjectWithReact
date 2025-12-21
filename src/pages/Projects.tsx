@@ -68,33 +68,31 @@ const Projects: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-16">
-        <section className="relative py-20 text-white">
-          {/* تصویر بک‌گراند */}
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/images/Banners/Commerce.jpg')",
-            }}
-          >  <div className="absolute inset-0 bg-black/200"></div></div>
-      
-      
-        {/* Overlay نیمه‌شفاف برای خوانایی متن */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      
-        {/* محتوای متن */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              {t('projectsPage.title')}
-            </h1>
-          </motion.div>
-        </div>
-      </section>
+  <section className="relative py-20 text-white overflow-hidden">
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage: "url('/images/Banners/aboutBanners.jpeg')",
+    }}
+  />
 
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/30 dark:bg-black/30" />
+
+  {/* Content */}
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        {t('projectsPage.title')}
+      </h1>
+    </motion.div>
+  </div>
+</section>
       {/* فیلتر دسته‌بندی */}
       <section className="py-6 bg-white dark:bg-navy-950 sticky top-16 z-40 border-b border-gray-200 dark:border-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
