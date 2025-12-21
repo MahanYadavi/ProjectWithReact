@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Zap, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Zap, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, PhoneCall  } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -17,18 +17,15 @@ const Footer: React.FC = () => {
               {t('footer.description')}
             </p> */}
             <div className="flex space-x-4 rtl:space-x-reverse">
-              <a href="#" className="text-gray-400 hover:text-gold-500 transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-gold-500 transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-gold-500 transition-colors">
+              
+
+              <a href="https://instagram.com/Mobanir" className="text-gray-400 hover:text-gold-500 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-gold-500 transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
+              
+  <a href="https://wa.me/+989982302930" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-500 transition-colors">
+    <PhoneCall className="w-5 h-5" />
+  </a>
             </div>
           </div>
 

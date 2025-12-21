@@ -299,7 +299,7 @@ const clients = [
       </section>
       <section className="py-20 bg-gray-50 dark:bg-black">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
+
     {/* TITLE */}
     <div className="text-center mb-14">
       <h2 className="text-4xl font-bold text-navy-900 dark:text-white">
@@ -312,37 +312,36 @@ const clients = [
 
     {/* CAROUSEL */}
     <Swiper
-  spaceBetween={30}
-  loop={true} // لوپ بینهایت
-  autoplay={{
-    delay: 1500, // زمان کمتر بین اسلایدها (1.5 ثانیه)
-    disableOnInteraction: false,
-  }}
-  breakpoints={{
-    0: { slidesPerView: 1 },
-    640: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-    1280: { slidesPerView: 4 },
-  }}
-  modules={[Autoplay]}
->
-  {certifications.map((cert, index) => (
-    <SwiperSlide key={index}>
-      <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">
-        <img
-          src={cert.logo}
-          alt={cert.name}
-          className="w-full h-auto object-contain rounded-xl"
-        />
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
-
+      spaceBetween={30}
+      loop={false} // ← لوپ غیر فعال شد تا duplicate نشود
+      autoplay={{
+        delay: 1500, // زمان بین اسلایدها
+        disableOnInteraction: false,
+      }}
+      breakpoints={{
+        0: { slidesPerView: 1 },
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+        1280: { slidesPerView: 4 },
+      }}
+      modules={[Autoplay]}
+    >
+      {certifications.map((cert, index) => (
+        <SwiperSlide key={index}>
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg">
+            <img
+              src={cert.logo}
+              alt={cert.name}
+              className="w-full h-auto object-contain rounded-xl"
+            />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
 
   </div>
 </section>
-  );
+
     </div>
   );
 };
