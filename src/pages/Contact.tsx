@@ -32,11 +32,11 @@ const Contact: React.FC = () => {
   {/* تصویر بک‌گراند */}
   <div
     className="absolute inset-0 bg-cover bg-center"
-    style={{    }}
+    style={{  backgroundImage: "url('/images/Banners/contact.jpg')"  }}
   ></div>
 
   {/* Overlay نیمه‌شفاف برای خوانایی متن */}
-  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div className="absolute inset`-0 bg-black bg-opacity-50"></div>
 
   {/* محتوای متن */}
   <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
