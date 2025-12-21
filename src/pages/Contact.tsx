@@ -28,15 +28,18 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-16">
-   <section className="relative py-20 text-white">
-  {/* تصویر بک‌گراند */}
-  <div
-    className="absolute inset-0 bg-cover bg-center"
-    style={{  backgroundImage: "url('/images/Banners/contact.jpg')"  }}
-  ></div>
+  <section className="relative py-20 text-white">
+    {/* تصویر بک‌گراند */}
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/images/Banners/contact.jpg')",
+      }}
+    >  <div className="absolute inset-0 bg-black/200"></div></div>
+
 
   {/* Overlay نیمه‌شفاف برای خوانایی متن */}
-  <div className="absolute inset`-0 bg-black bg-opacity-50"></div>
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
   {/* محتوای متن */}
   <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -48,9 +51,6 @@ const Contact: React.FC = () => {
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
         {t('contact.title')}
       </h1>
-      <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-        {t('contact.subtitle')}
-      </p>
     </motion.div>
   </div>
 </section>
