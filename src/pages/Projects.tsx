@@ -68,11 +68,29 @@ const Projects: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-16">
-      {/* بخش هدر */}
-      <section className="relative py-20 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 dark:from-black dark:via-navy-950 dark:to-black text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{t('projectsPage.title')}</h1>
+        <section className="relative py-20 text-white">
+          {/* تصویر بک‌گراند */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/images/Banners/Commerce.jpg')",
+            }}
+          >  <div className="absolute inset-0 bg-black/200"></div></div>
+      
+      
+        {/* Overlay نیمه‌شفاف برای خوانایی متن */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      
+        {/* محتوای متن */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              {t('projectsPage.title')}
+            </h1>
           </motion.div>
         </div>
       </section>

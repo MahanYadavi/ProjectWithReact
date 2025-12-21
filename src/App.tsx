@@ -21,7 +21,7 @@ function AppContent() {
     setIsLoading(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // 5 seconds
+    }, 3500); // 5 seconds
 
     return () => clearTimeout(timer);
   }, [location.pathname]);

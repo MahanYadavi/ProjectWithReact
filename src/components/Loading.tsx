@@ -7,7 +7,7 @@ const Loading: React.FC = () => {
       <img
         src="/images/Logo.png" // مسیر درست public
         alt="Logo"
-        className="h-32 w-32 animate-ping"
+        className="h-32 w-32 animate-bounce"
       />
     </div>
   );
