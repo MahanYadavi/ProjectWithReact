@@ -39,7 +39,7 @@ const Home: React.FC = () => {
   ];
 const clients = [
   { name: 'Client 1', logo: '/images/Customers/fakkor.png' },
-  { name: 'Client 2', logo: '/images/Customers/folladMobarake.png' },
+  { name: 'Client 2', logo: '/images/Customers/Foolad.png' },
   { name: 'Client 3', logo: '/images/Customers/folladTeknik.png' },
   { name: 'Client 4', logo: '/images/Customers/mapna.png' },
   { name: 'Client 5', logo: '/images/Customers/zoobahanEsfehan.png' },
