@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import emailjs from 'emailjs-com';  // اضافه کردن کتابخانه EmailJS
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
@@ -14,9 +15,26 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+
+    // ارسال ایمیل با استفاده از emailjs
+    emailjs
+      .sendForm(
+        'service_wp5oqh9',  // Service ID که از EmailJS دریافت کرده‌اید
+        'template_ouy247h',  // Template ID که در EmailJS ساخته‌اید
+        e.target,  // ارسال فرم
+        'rzgSkc0XYe5QHMQlR'  // API Key که از EmailJS دریافت کرده‌اید
+      )
+      .then(
+        (result) => {
+          console.log('Email sent:', result.text);
+          alert('Thank you for your message! We will get back to you soon.');
+          setFormData({ name: '', email: '', phone: '', message: '' });
+        },
+        (error) => {
+          console.log('Error:', error.text);
+          alert('Oops! Something went wrong. Please try again later.');
+        }
+      );
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -28,32 +46,23 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-16">
-  <section className="relative py-20 text-white">
-    {/* تصویر بک‌گراند */}
-    <div
-      className="absolute inset-0 bg-cover bg-center"
-      style={{
-        backgroundImage: "url('/images/Banners/contact.jpg')",
-      }}
-    >  <div className="absolute inset-0 bg-black/200"></div></div>
-
-
-  {/* Overlay نیمه‌شفاف برای خوانایی متن */}
-  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-  {/* محتوای متن */}
-  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-        {t('contact.title')}
-      </h1>
-    </motion.div>
-  </div>
-</section>
+      <section className="relative py-20 text-white">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/Banners/contact.jpg')" }}>
+          <div className="absolute inset-0 bg-black/200"></div>
+        </div>
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              {t('contact.title')}
+            </h1>
+          </motion.div>
+        </div>
+      </section>
       <section className="py-20 bg-white dark:bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -62,11 +71,7 @@ const Contact: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-navy-900 dark:text-white mb-8">
-                {t('contact.info')}
-              </h2>
-
-              <div className="space-y-6">
+                        <div className="space-y-6">
                 <div className="flex items-start space-x-4 rtl:space-x-reverse p-6 bg-gray-50 dark:bg-navy-900 rounded-xl">
                   <div className="w-12 h-12 bg-gold-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
@@ -126,6 +131,10 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
+              <h2 className="text-3xl font-bold text-navy-900 dark:text-white mb-8">
+                {t('contact.info')}
+              </h2>
+              {/* بخش‌های اطلاعات تماس */}
             </motion.div>
 
             <motion.div
@@ -211,7 +220,8 @@ const Contact: React.FC = () => {
 
       <section className="h-96 bg-gray-200 dark:bg-navy-900">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d202.34924294589138!2d51.4332346!3d35.7609328!3m2!1i1024!2i768!4f13.1!2m1!1z2YXbjNix2K_Yp9mF2KfYryzYrtuM2KfYqNin2YYg2qnYp9iy2LHZiNmGINi02YXYp9mE24wsINiu24zYp9io2KfZhiDZhtuM2qkg2LHYp9uMLCDZvtmE2KfaqSDbsiwg2LfYqNmC2Ycg2LPZiNmFINmI2KfYrdivINu24oCt!5e0!3m2!1sen!2s!4v1763468468527!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d202.34924294589138!2d51.4332346!3d35.7609328!3m2!1i1024!2i768!4f13.1!2m1!1z2YXbjNix2K_Yp9mF2KfYryzYrtuM2KfYqNin2YYg2qnYp9iy2LHZiNmGINi02YXYp9mE24wsINiu24zYp9io2KfZhiDZhtuM2qkg2LHYp9uMLCDZvtmE2KfaqSDbsiwg2LfYqNmC2Ycg2LPZiNmFINmI2KfYrdivINu24oCt!5e0!3m2!1sen!2s!4v1763468468527!5m2!1sen!2s"
+
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
