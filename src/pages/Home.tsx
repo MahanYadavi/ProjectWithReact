@@ -84,6 +84,36 @@ const clients = [
 
   ];
 
+  const newsHighlights = [
+    {
+      key: 'news1',
+      image: '/images/index/post.jpg',
+      category: t('newsPage.items.news1.category'),
+      date: t('newsPage.items.news1.date'),
+      readTime: t('newsPage.items.news1.readTime'),
+      title: t('newsPage.items.news1.title'),
+      excerpt: t('newsPage.items.news1.excerpt'),
+    },
+    {
+      key: 'news2',
+      image: '/images/index/Foolad.jpg',
+      category: t('newsPage.items.news2.category'),
+      date: t('newsPage.items.news2.date'),
+      readTime: t('newsPage.items.news2.readTime'),
+      title: t('newsPage.items.news2.title'),
+      excerpt: t('newsPage.items.news2.excerpt'),
+    },
+    {
+      key: 'news3',
+      image: '/images/index/janja.jpeg',
+      category: t('newsPage.items.news3.category'),
+      date: t('newsPage.items.news3.date'),
+      readTime: t('newsPage.items.news3.readTime'),
+      title: t('newsPage.items.news3.title'),
+      excerpt: t('newsPage.items.news3.excerpt'),
+    },
+  ];
+
    return (
     <div className="min-h-screen bg-white dark:bg-navy-950 text-navy-900 dark:text-white overflow-x-hidden">
       {/* Hero Section */}
@@ -351,6 +381,69 @@ const clients = [
 
   </div>
 </section>
+
+      {/* News Section */}
+      <section className="py-16 md:py-20 bg-white dark:bg-navy-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap items-center justify-between gap-4 mb-10"
+          >
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-navy-900 dark:text-white">
+                {t('newsPage.latestTitle')}
+              </h2>
+              <p className="mt-3 text-gray-600 dark:text-gray-300">
+                {t('newsPage.latestSubtitle')}
+              </p>
+            </div>
+            <Link
+              to="/news"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gold-500 hover:bg-gold-600 text-white font-semibold transition-all shadow-lg hover:shadow-gold-500/40"
+            >
+              {t('newsPage.readMore')}
+            </Link>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {newsHighlights.map((item, index) => (
+              <motion.article
+                key={item.key}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group rounded-2xl border border-gray-100/70 dark:border-navy-800 bg-white dark:bg-navy-900 overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+              >
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-navy-900">
+                    {item.category}
+                  </span>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-semibold text-navy-900 dark:text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 line-clamp-3">
+                    {item.excerpt}
+                  </p>
+                  <div className="mt-4 flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+                    <span>{item.date}</span>
+                    <span>{item.readTime}</span>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
 
     </div>
   );
