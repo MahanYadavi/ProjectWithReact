@@ -285,7 +285,7 @@ const clients = [
       </section>
 
       {/* Clients Section */}
-      <section className="py-16 bg-[#F8FAFC] dark:bg-[#0F172A]">
+      <section className="py-16 bg-[#F8FAFC] dark:bg-[#d4af37]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
