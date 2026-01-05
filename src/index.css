@@ -13,7 +13,20 @@
     text-wrap: balance;
   }
 }
+@keyframes logo-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
+@layer utilities {
+  .animate-logo-rotate {
+    animation: logo-rotate 1.6s ease-in-out infinite alternate;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
