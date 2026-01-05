@@ -49,6 +49,15 @@ const projectMetadata = [
 const Projects: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [filter, setFilter] = useState(categories[0]);
+  const [selectedProject, setSelectedProject] = useState<{
+    id: number;
+    image: string;
+    category: string;
+    year: string;
+    title: string;
+    description: string;
+    location: string;
+  } | null>(null);
 
   const projects = useMemo(() => {
     return projectMetadata.map(p => {
@@ -130,7 +139,16 @@ const Projects: React.FC = () => {
                 key={project.id}
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                 layout
-                className="group bg-white dark:bg-navy-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col"
+                className="group bg-white dark:bg-navy-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all flex flex-col cursor-pointer focus-visible:ring-2 focus-visible:ring-gold-500"
+                role="button"
+                tabIndex={0}
+                onClick={() => setSelectedProject(project)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    setSelectedProject(project);
+                  }
+                }}
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
@@ -162,6 +180,65 @@ const Projects: React.FC = () => {
           </motion.div>
         </div>
       </section>
+      {selectedProject && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 py-8 backdrop-blur-sm">
+          <div className="relative w-full max-w-3xl overflow-hidden rounded-3xl bg-white dark:bg-navy-900 shadow-2xl">
+            <button
+              type="button"
+              onClick={() => setSelectedProject(null)}
+              className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-navy-900 shadow hover:bg-white dark:bg-navy-950 dark:text-white"
+            >
+              {t('newsPage.detail.backToNews')}
+            </button>
+            <div className="max-h-[85vh] overflow-y-auto">
+              <div className="aspect-[16/9] w-full overflow-hidden">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="p-8">
+                <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500 dark:text-gray-300">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-gold-500/10 px-3 py-1 font-semibold text-gold-600 dark:text-gold-300">
+                    <Tag className="h-4 w-4" />
+                    {t(`projectsPage.categories.${selectedProject.category}`)}
+                  </span>
+                  <span className="inline-flex items-center gap-2">
+                    <MapPin className="h-4 w-4 text-gold-500" />
+                    {selectedProject.location}
+                  </span>
+                  <span className="inline-flex items-center gap-2">
+                    <Calendar className="h-4 w-4 text-gold-500" />
+                    {selectedProject.year}
+                  </span>
+                </div>
+                <h2 className="mt-4 text-2xl md:text-3xl font-bold text-navy-900 dark:text-white">
+                  {selectedProject.title}
+                </h2>
+                <p className="mt-4 text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {selectedProject.description}
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedProject(null)}
+                    className="rounded-full bg-navy-900 px-6 py-3 text-sm font-semibold text-white hover:bg-navy-800 dark:bg-white dark:text-navy-900"
+                  >
+                    {t('newsPage.detail.backToNews')}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => setSelectedProject(null)}
+            className="absolute inset-0 -z-10"
+            aria-label="Close modal"
+          />
+        </div>
+      )}
     </div>
   );
 };
