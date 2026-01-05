@@ -10,6 +10,9 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
+import BoardOfDirectors from './pages/BoardOfDirectors';
+import Vision from './pages/Vision';
+import ProjectRecords from './pages/ProjectRecords';
 
 import './i18n/config';
 
@@ -37,6 +40,9 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/about/board" element={<BoardOfDirectors />} />
+        <Route path="/about/vision" element={<Vision />} />
+        <Route path="/about/project-records" element={<ProjectRecords />} />
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />

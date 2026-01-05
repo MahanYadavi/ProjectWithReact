@@ -10,6 +10,8 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [isMobileLangMenuOpen, setIsMobileLangMenuOpen] = useState(false);
+  const [isAboutMenuOpen, setIsAboutMenuOpen] = useState(false);
+  const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
@@ -44,13 +46,21 @@ const Navbar: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const aboutSubLinks = [
+    { path: '/about/board', label: t('nav.aboutSub.board') },
+    { path: '/about/vision', label: t('nav.aboutSub.vision') },
+    { path: '/about/project-records', label: t('nav.aboutSub.records') },
+  ];
+
   const navLinks = [
     { path: '/', label: t('nav.home') },
     { path: '/projects', label: t('nav.projects') },
     { path: '/services', label: t('nav.services') },
-    { path: '/about', label: t('nav.about') },
+    { path: '/about', label: t('nav.about'), children: aboutSubLinks },
     { path: '/contact', label: t('nav.contact') },
   ];
+
+  const isAboutActive = location.pathname.startsWith('/about');
 
   return (
     <nav className="fixed w-full z-50 bg-white/90 dark:bg-navy-950/90 backdrop-blur-md border-b border-gray-200 dark:border-navy-800 transition-colors">
@@ -67,23 +77,75 @@ const Navbar: React.FC = () => {
           {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
             {navLinks.map(link => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm font-medium transition-colors relative group ${
-                  location.pathname === link.path
-                    ? 'text-gold-600 dark:text-gold-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-gold-600 dark:hover:text-gold-400'
-                }`}
-              >
-                {link.label}
-                {location.pathname === link.path && (
-                  <motion.div
-                    layoutId="navbar-indicator"
-                    className="absolute -bottom-6 left-0 right-0 h-0.5 bg-gold-600 dark:bg-gold-400"
-                  />
-                )}
-              </Link>
+              link.children ? (
+                <div
+                  key={link.path}
+                  className="relative"
+                  onMouseEnter={() => setIsAboutMenuOpen(true)}
+                  onMouseLeave={() => setIsAboutMenuOpen(false)}
+                >
+                  <Link
+                    to={link.path}
+                    className={`text-sm font-medium transition-colors relative group inline-flex items-center gap-1 ${
+                      isAboutActive
+                        ? 'text-gold-600 dark:text-gold-400'
+                        : 'text-gray-700 dark:text-gray-300 hover:text-gold-600 dark:hover:text-gold-400'
+                    }`}
+                  >
+                    {link.label}
+                    <ChevronDown className={`w-4 h-4 transition-transform ${isAboutMenuOpen ? 'rotate-180' : ''}`} />
+                    {isAboutActive && (
+                      <motion.div
+                        layoutId="navbar-indicator"
+                        className="absolute -bottom-6 left-0 right-0 h-0.5 bg-gold-600 dark:bg-gold-400"
+                      />
+                    )}
+                  </Link>
+                  <AnimatePresence>
+                    {isAboutMenuOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute top-full right-0 rtl:right-auto rtl:left-0 mt-3 w-56 rounded-2xl bg-white dark:bg-navy-900 shadow-2xl border border-gray-200 dark:border-navy-700 overflow-hidden"
+                      >
+                        {link.children.map(child => (
+                          <Link
+                            key={child.path}
+                            to={child.path}
+                            onClick={() => setIsAboutMenuOpen(false)}
+                            className={`block px-4 py-3 text-sm font-medium transition-colors ${
+                              location.pathname === child.path
+                                ? 'bg-gold-600/10 text-gold-700 dark:text-gold-400'
+                                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-navy-800'
+                            }`}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`text-sm font-medium transition-colors relative group ${
+                    location.pathname === link.path
+                      ? 'text-gold-600 dark:text-gold-400'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-gold-600 dark:hover:text-gold-400'
+                  }`}
+                >
+                  {link.label}
+                  {location.pathname === link.path && (
+                    <motion.div
+                      layoutId="navbar-indicator"
+                      className="absolute -bottom-6 left-0 right-0 h-0.5 bg-gold-600 dark:bg-gold-400"
+                    />
+                  )}
+                </Link>
+              )
             ))}
           </div>
 
@@ -200,18 +262,72 @@ const Navbar: React.FC = () => {
           >
             <div className="px-4 py-4 space-y-3">
               {navLinks.map(link => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`block text-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    location.pathname === link.path
-                      ? 'bg-gold-600 text-white'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-navy-800'
-                  }`}
-                >
-                  {link.label}
-                </Link>
+                link.children ? (
+                  <div key={link.path} className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <Link
+                        to={link.path}
+                        onClick={() => setIsOpen(false)}
+                        className={`flex-1 text-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                          isAboutActive
+                            ? 'bg-gold-600 text-white'
+                            : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-navy-800'
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
+                        className="p-2 rounded-lg bg-gray-100 dark:bg-navy-800 text-gray-600 dark:text-gray-300"
+                        aria-label={t('nav.about')}
+                      >
+                        <ChevronDown className={`w-4 h-4 transition-transform ${isMobileAboutOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                    </div>
+                    <AnimatePresence>
+                      {isMobileAboutOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="space-y-2"
+                        >
+                          {link.children.map(child => (
+                            <Link
+                              key={child.path}
+                              to={child.path}
+                              onClick={() => {
+                                setIsOpen(false);
+                                setIsMobileAboutOpen(false);
+                              }}
+                              className={`block text-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                                location.pathname === child.path
+                                  ? 'bg-gold-600/10 text-gold-700 dark:text-gold-400'
+                                  : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-navy-800'
+                              }`}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setIsOpen(false)}
+                    className={`block text-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      location.pathname === link.path
+                        ? 'bg-gold-600 text-white'
+                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-navy-800'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
 
               <Link
