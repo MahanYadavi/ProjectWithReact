@@ -187,7 +187,7 @@ const Projects: React.FC = () => {
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="h-full w-full object-cover"
+                   className="h-full w-full object-cover"
                 />
               </div>
               <div className="p-8">
