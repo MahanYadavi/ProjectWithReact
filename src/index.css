@@ -24,7 +24,7 @@
 
 @layer utilities {
   .animate-logo-rotate {
-    animation: logo-rotate 1.6s ease-in-out infinite alternate;
+    animation: logo-rotate 1s infinite alternate;
   }
 }
 html {
