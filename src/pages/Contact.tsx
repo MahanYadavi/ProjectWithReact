@@ -46,18 +46,19 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-16">
-      <section className="relative py-20 text-white">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/Banners/contact.jpg')" }}>
-          <div className="absolute inset-0 bg-black/200"></div>
-        </div>
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <section className="relative h-48 md:h-64 lg:h-80 text-white overflow-hidden flex items-center justify-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/Banners/contact.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
               {t('contact.title')}
             </h1>
           </motion.div>
