@@ -48,6 +48,7 @@ const Navbar: React.FC = () => {
     { path: '/', label: t('nav.home') },
     { path: '/projects', label: t('nav.projects') },
     { path: '/services', label: t('nav.services') },
+    { path: '/news', label: t('nav.news') },
     { path: '/about', label: t('nav.about') },
     { path: '/contact', label: t('nav.contact') },
   ];
