@@ -7,6 +7,11 @@ const resources = {
       nav: {
         home: 'Home',
         about: 'About Us',
+        aboutSub: {
+          board: 'Board of Directors',
+          vision: 'Vision & Outlook',
+          records: 'Project Supply Records',
+        },
         projects: 'Projects',
         services: 'Commerce',
         news: 'News',
@@ -180,6 +185,154 @@ const resources = {
         values: 'Our Values',
         valuesText: 'Integrity, Innovation, Safety, and Customer Satisfaction',
       },
+      aboutBoard: {
+        badge: 'Governance',
+        title: 'Board of Directors',
+        subtitle: 'Strategic leadership focused on safety, resilience, and sustainable growth.',
+        leadership: {
+          title: 'Executive Leadership Overview',
+          description: 'Our board combines decades of industrial delivery expertise with financial discipline and a deep commitment to client partnerships.',
+        },
+        metrics: {
+          item1: { value: '15+ Years', label: 'Industrial delivery heritage' },
+          item2: { value: '60+ Projects', label: 'Major EPC & supply programs' },
+          item3: { value: '12 Regions', label: 'Active operational footprint' },
+          item4: { value: '98% On-time', label: 'Timely execution record' },
+        },
+        governance: {
+          title: 'Governance Priorities',
+          items: {
+            item1: 'Safety-first decision making across all project phases.',
+            item2: 'Transparent reporting for clients, partners, and stakeholders.',
+            item3: 'Investment in advanced engineering and digital supervision.',
+            item4: 'Sustainable procurement aligned with international standards.',
+          },
+        },
+        members: {
+          title: 'Board Members',
+          ceo: {
+            name: 'Eng. Amir Hosseini',
+            role: 'Chief Executive Officer',
+            bio: 'Leads the corporate vision with a focus on industrial EPC programs and client alignment.',
+          },
+          operations: {
+            name: 'Eng. Leila Rahimi',
+            role: 'Operations Director',
+            bio: 'Oversees multidisciplinary delivery teams and nationwide deployment readiness.',
+          },
+          engineering: {
+            name: 'Eng. Reza Karimi',
+            role: 'Engineering Director',
+            bio: 'Drives electrical, gas, and automation design excellence across major projects.',
+          },
+          finance: {
+            name: 'Dr. Sara Moradi',
+            role: 'Finance & Compliance Director',
+            bio: 'Ensures financial resilience, contract governance, and strategic sourcing.',
+          },
+        },
+      },
+      aboutVision: {
+        badge: 'Outlook',
+        title: 'Vision & Outlook',
+        subtitle: 'Scaling industrial infrastructure through smart energy, reliability, and trusted partnerships.',
+        overview: {
+          title: 'Our Vision',
+          description: 'We aim to be the most dependable EPC partner for power, gas, and pelletizing projects by combining engineering depth with agile execution.',
+        },
+        metrics: {
+          item1: { label: 'Strategic priority', value: 'Reliability & safety' },
+          item2: { label: 'Investment focus', value: 'Digital supervision' },
+          item3: { label: 'Growth model', value: 'Long-term partnerships' },
+          item4: { label: 'Sustainability', value: 'Responsible sourcing' },
+        },
+        roadmap: {
+          title: 'Future Roadmap',
+          item1: 'Expand smart substation and automation solutions for heavy industries.',
+          item2: 'Strengthen regional supply chains for critical electrical equipment.',
+          item3: 'Invest in project intelligence and lifecycle asset monitoring.',
+          item4: 'Develop talent pipelines for advanced engineering disciplines.',
+        },
+        pillars: {
+          title: 'Strategic Pillars',
+          item1: {
+            title: 'Operational Excellence',
+            description: 'Deliver on-time EPC programs with disciplined planning and site execution.',
+          },
+          item2: {
+            title: 'Client Confidence',
+            description: 'Build trusted partnerships through transparent reporting and joint problem solving.',
+          },
+          item3: {
+            title: 'Innovation & Sustainability',
+            description: 'Adopt modern technologies and sustainable practices across procurement and delivery.',
+          },
+        },
+      },
+      aboutRecords: {
+        badge: 'Track Record',
+        title: 'Project Supply Records',
+        subtitle: 'A history of reliable procurement, delivery, and commissioning support.',
+        intro: {
+          title: 'Procurement & Supply Performance',
+          description: 'Our supply teams coordinate engineering, procurement, and logistics to keep critical industrial projects on schedule.',
+        },
+        metrics: {
+          item1: { label: 'Major supply packages', value: '80+ Delivered' },
+          item2: { label: 'Average lead time reduction', value: '22%' },
+          item3: { label: 'Preferred vendor network', value: '120+ Partners' },
+          item4: { label: 'Quality inspections', value: '100% Verified' },
+        },
+        highlights: {
+          title: 'Key Highlights',
+          item1: {
+            title: 'High-voltage equipment sourcing',
+            description: 'Coordinated sourcing of transformers, switchgear, and protection systems for industrial complexes.',
+          },
+          item2: {
+            title: 'Gas transmission materials',
+            description: 'Secured critical piping, instrumentation, and valve packages for regional gas networks.',
+          },
+          item3: {
+            title: 'Pelletizing plant integration',
+            description: 'Aligned mechanical, electrical, and automation supply chains for turnkey pelletizing facilities.',
+          },
+        },
+        supplies: {
+          title: 'Supply Categories',
+          item1: {
+            title: 'Electrical & MV/LV Systems',
+            description: 'Switchgear, transformers, UPS systems, and power distribution components.',
+          },
+          item2: {
+            title: 'Instrumentation & Automation',
+            description: 'PLC panels, field instruments, SCADA hardware, and control wiring.',
+          },
+          item3: {
+            title: 'Gas Transmission Equipment',
+            description: 'Pipes, valves, regulators, and metering solutions for gas corridors.',
+          },
+          item4: {
+            title: 'Mechanical & Structural Packages',
+            description: 'Cable trays, structural supports, and specialized mounting systems.',
+          },
+        },
+        timeline: {
+          title: 'Delivery Timeline Highlights',
+          item1: {
+            year: '2016',
+            description: 'Standardized procurement workflows for national industrial sites.',
+          },
+          item2: {
+            year: '2019',
+            description: 'Expanded vendor qualification program and localized sourcing capacity.',
+          },
+          item3: {
+            year: '2023',
+            description: 'Integrated digital tracking for logistics, inspection, and commissioning support.',
+          },
+        },
+      },
       contact: {
           title: "Contact Us",
   subtitle: "Get in Touch",
@@ -327,6 +480,11 @@ const resources = {
       nav: {
         home: 'خانه',
         about: 'درباره ما',
+        aboutSub: {
+          board: 'هیئت مدیره',
+          vision: 'چشم‌انداز',
+          records: 'سوابق تأمین پروژه‌ها',
+        },
         projects: 'پروژه‌ها',
         services: 'بازرگانی',
         news: 'اخبار',
@@ -501,6 +659,154 @@ const resources = {
         values: 'ارزش‌های ما',
         valuesText: 'صداقت، نوآوری، ایمنی و رضایت مشتری',
       },
+      aboutBoard: {
+        badge: 'حاکمیت',
+        title: 'هیئت مدیره',
+        subtitle: 'رهبری راهبردی با تمرکز بر ایمنی، پایداری و رشد بلندمدت.',
+        leadership: {
+          title: 'مروری بر مدیریت اجرایی',
+          description: 'اعضای هیئت‌مدیره ترکیبی از تجربه‌های صنعتی، انضباط مالی و تعهد به شراکت‌های پایدار با کارفرمایان هستند.',
+        },
+        metrics: {
+          item1: { value: '۱۵+ سال', label: 'سابقه اجرای صنعتی' },
+          item2: { value: '۶۰+ پروژه', label: 'برنامه‌های EPC و تأمین' },
+          item3: { value: '۱۲ استان', label: 'گستره عملیات فعال' },
+          item4: { value: '۹۸٪ به‌موقع', label: 'نرخ تحویل در زمان مقرر' },
+        },
+        governance: {
+          title: 'اولویت‌های حاکمیتی',
+          items: {
+            item1: 'تصمیم‌گیری ایمن در تمام مراحل اجرای پروژه.',
+            item2: 'گزارش‌دهی شفاف برای کارفرمایان و ذی‌نفعان.',
+            item3: 'سرمایه‌گذاری در مهندسی پیشرفته و نظارت دیجیتال.',
+            item4: 'تأمین پایدار مطابق استانداردهای بین‌المللی.',
+          },
+        },
+        members: {
+          title: 'اعضای هیئت‌مدیره',
+          ceo: {
+            name: 'مهندس امیر حسینی',
+            role: 'مدیرعامل',
+            bio: 'هدایت چشم‌انداز شرکت با تمرکز بر برنامه‌های EPC و هم‌راستایی با نیازهای کارفرما.',
+          },
+          operations: {
+            name: 'مهندس لیلا رحیمی',
+            role: 'مدیر عملیات',
+            bio: 'راهبری تیم‌های چندرشته‌ای و آمادگی استقرار در پروژه‌های ملی.',
+          },
+          engineering: {
+            name: 'مهندس رضا کریمی',
+            role: 'مدیر مهندسی',
+            bio: 'پیشبرد طراحی برق، گاز و اتوماسیون در پروژه‌های کلیدی.',
+          },
+          finance: {
+            name: 'دکتر سارا مرادی',
+            role: 'مدیر مالی و تطبیق',
+            bio: 'تضمین پایداری مالی، حاکمیت قراردادی و تأمین راهبردی.',
+          },
+        },
+      },
+      aboutVision: {
+        badge: 'چشم‌انداز',
+        title: 'چشم‌انداز و افق آینده',
+        subtitle: 'گسترش زیرساخت‌های صنعتی با انرژی هوشمند، قابلیت اطمینان و شراکت‌های قابل اعتماد.',
+        overview: {
+          title: 'چشم‌انداز ما',
+          description: 'هدف ما تبدیل شدن به مطمئن‌ترین شریک EPC برای پروژه‌های برق، گاز و گندله‌سازی با ترکیب عمق مهندسی و اجرای چابک است.',
+        },
+        metrics: {
+          item1: { label: 'اولویت راهبردی', value: 'قابلیت اطمینان و ایمنی' },
+          item2: { label: 'تمرکز سرمایه‌گذاری', value: 'نظارت دیجیتال' },
+          item3: { label: 'الگوی رشد', value: 'شراکت‌های بلندمدت' },
+          item4: { label: 'پایداری', value: 'تأمین مسئولانه' },
+        },
+        roadmap: {
+          title: 'نقشه راه آینده',
+          item1: 'گسترش راهکارهای پست هوشمند و اتوماسیون برای صنایع سنگین.',
+          item2: 'تقویت زنجیره تأمین منطقه‌ای تجهیزات برق حیاتی.',
+          item3: 'سرمایه‌گذاری در هوش پروژه و پایش چرخه عمر دارایی‌ها.',
+          item4: 'توسعه مسیرهای جذب و پرورش استعدادهای مهندسی پیشرفته.',
+        },
+        pillars: {
+          title: 'ستون‌های راهبردی',
+          item1: {
+            title: 'تعالی عملیاتی',
+            description: 'اجرای به‌موقع برنامه‌های EPC با برنامه‌ریزی دقیق و مدیریت سایت.',
+          },
+          item2: {
+            title: 'اعتماد کارفرما',
+            description: 'ایجاد شراکت‌های پایدار با گزارش‌دهی شفاف و حل مسئله مشترک.',
+          },
+          item3: {
+            title: 'نوآوری و پایداری',
+            description: 'به‌کارگیری فناوری‌های نو و رویه‌های پایدار در تأمین و اجرا.',
+          },
+        },
+      },
+      aboutRecords: {
+        badge: 'سوابق',
+        title: 'سوابق تأمین پروژه‌ها',
+        subtitle: 'سابقه‌ای قابل اتکا در تأمین، تحویل و پشتیبانی راه‌اندازی.',
+        intro: {
+          title: 'عملکرد تأمین و تدارکات',
+          description: 'تیم‌های تأمین ما مهندسی، خرید و لجستیک را هماهنگ می‌کنند تا پروژه‌های صنعتی در مسیر زمان‌بندی باقی بمانند.',
+        },
+        metrics: {
+          item1: { label: 'پکیج‌های تأمین اصلی', value: '۸۰+ تحویل' },
+          item2: { label: 'کاهش میانگین زمان تأمین', value: '۲۲٪' },
+          item3: { label: 'شبکه تأمین‌کنندگان', value: '۱۲۰+ شریک' },
+          item4: { label: 'بازرسی کیفیت', value: '۱۰۰٪ تأیید' },
+        },
+        highlights: {
+          title: 'نکات برجسته',
+          item1: {
+            title: 'تأمین تجهیزات فشار قوی',
+            description: 'هماهنگی تأمین ترانس‌ها، سوئیچگیرها و سیستم‌های حفاظت برای مجتمع‌های صنعتی.',
+          },
+          item2: {
+            title: 'مواد خطوط انتقال گاز',
+            description: 'تأمین لوله، ابزار دقیق و پکیج‌های شیرآلات برای شبکه‌های انتقال گاز.',
+          },
+          item3: {
+            title: 'یکپارچه‌سازی پروژه‌های گندله‌سازی',
+            description: 'هم‌راستاسازی زنجیره تأمین مکانیک، برق و اتوماسیون برای پروژه‌های کلید در دست.',
+          },
+        },
+        supplies: {
+          title: 'دسته‌بندی اقلام تأمین',
+          item1: {
+            title: 'سیستم‌های برق و MV/LV',
+            description: 'سوئیچگیر، ترانسفورماتور، UPS و تجهیزات توزیع نیرو.',
+          },
+          item2: {
+            title: 'ابزار دقیق و اتوماسیون',
+            description: 'تابلوهای PLC، تجهیزات میدانی، سخت‌افزار SCADA و کابل‌های کنترل.',
+          },
+          item3: {
+            title: 'تجهیزات خطوط انتقال گاز',
+            description: 'لوله، شیرآلات، رگولاتور و سامانه‌های اندازه‌گیری.',
+          },
+          item4: {
+            title: 'پکیج‌های مکانیکی و سازه‌ای',
+            description: 'لدر و سینی کابل، سازه‌های پشتیبان و سیستم‌های نصب تخصصی.',
+          },
+        },
+        timeline: {
+          title: 'برجسته‌ترین مراحل تحویل',
+          item1: {
+            year: '۱۳۹۵',
+            description: 'استانداردسازی فرآیندهای خرید برای سایت‌های صنعتی کشور.',
+          },
+          item2: {
+            year: '۱۳۹۸',
+            description: 'گسترش برنامه ارزیابی تامین‌کنندگان و بومی‌سازی ظرفیت‌ها.',
+          },
+          item3: {
+            year: '۱۴۰۲',
+            description: 'یکپارچه‌سازی رهگیری دیجیتال برای لجستیک، بازرسی و راه‌اندازی.',
+          },
+        },
+      },
       contact: {
         title: 'تماس با ما',
         subtitle: 'با ما در ارتباط باشید',
@@ -622,6 +928,11 @@ const resources = {
     nav: {
       home: "الرئيسية",
       about: "من نحن",
+      aboutSub: {
+        board: 'مجلس الإدارة',
+        vision: 'الرؤية',
+        records: 'سجل توريد المشاريع',
+      },
       projects: "المشاريع",
       services: "الخدمات",
       news: "الأخبار",
@@ -794,6 +1105,154 @@ const resources = {
       missionText: "تقديم جودة استثنائية وسلامة وموثوقية في كل مشروع نقوم به",
       values: "قيمنا",
       valuesText: "النزاهة، الابتكار، السلامة ورضا العملاء"
+    },
+    aboutBoard: {
+      badge: "الحوكمة",
+      title: "مجلس الإدارة",
+      subtitle: "قيادة استراتيجية تركز على السلامة والاستدامة والنمو طويل الأمد.",
+      leadership: {
+        title: "نظرة على القيادة التنفيذية",
+        description: "يجمع المجلس بين خبرة صناعية واسعة وانضباط مالي والتزام واضح بشراكات العملاء.",
+      },
+      metrics: {
+        item1: { value: "15+ سنة", label: "خبرة تنفيذ صناعي" },
+        item2: { value: "60+ مشروعًا", label: "برامج EPC والتوريد" },
+        item3: { value: "12 منطقة", label: "نطاق تشغيلي نشط" },
+        item4: { value: "98٪ في الموعد", label: "معدل تسليم منضبط" },
+      },
+      governance: {
+        title: "أولويات الحوكمة",
+        items: {
+          item1: "قرارات قائمة على السلامة في جميع مراحل المشروع.",
+          item2: "تقارير شفافة للعملاء والشركاء وأصحاب المصلحة.",
+          item3: "استثمار في الهندسة المتقدمة والرقابة الرقمية.",
+          item4: "توريد مستدام وفق المعايير الدولية.",
+        },
+      },
+      members: {
+        title: "أعضاء المجلس",
+        ceo: {
+          name: "م. أمير حسيني",
+          role: "الرئيس التنفيذي",
+          bio: "يقود رؤية الشركة مع تركيز على برامج EPC والمواءمة مع احتياجات العملاء.",
+        },
+        operations: {
+          name: "م. ليلى رحيمي",
+          role: "مدير العمليات",
+          bio: "تشرف على فرق متعددة التخصصات وجاهزية التنفيذ على مستوى البلاد.",
+        },
+        engineering: {
+          name: "م. رضا كريمي",
+          role: "مدير الهندسة",
+          bio: "يدفع تميز تصميم الكهرباء والغاز والأتمتة في المشاريع الكبرى.",
+        },
+        finance: {
+          name: "د. سارة مرادي",
+          role: "مدير المالية والامتثال",
+          bio: "تضمن الاستقرار المالي وحوكمة العقود واستراتيجية التوريد.",
+        },
+      },
+    },
+    aboutVision: {
+      badge: "الرؤية",
+      title: "الرؤية والأفق المستقبلي",
+      subtitle: "توسيع البنية الصناعية عبر الطاقة الذكية والموثوقية والشراكات الموثوقة.",
+      overview: {
+        title: "رؤيتنا",
+        description: "نطمح لأن نكون الشريك الأكثر موثوقية لمشاريع الكهرباء والغاز والتكوير عبر دمج العمق الهندسي مع التنفيذ المرن.",
+      },
+      metrics: {
+        item1: { label: "الأولوية الاستراتيجية", value: "الموثوقية والسلامة" },
+        item2: { label: "تركيز الاستثمار", value: "الرقابة الرقمية" },
+        item3: { label: "نمو الأعمال", value: "شراكات طويلة الأمد" },
+        item4: { label: "الاستدامة", value: "توريد مسؤول" },
+      },
+      roadmap: {
+        title: "خارطة الطريق المستقبلية",
+        item1: "توسيع حلول المحطات الذكية والأتمتة للصناعات الثقيلة.",
+        item2: "تعزيز سلاسل توريد إقليمية لمعدات الكهرباء الحرجة.",
+        item3: "الاستثمار في ذكاء المشاريع ومراقبة دورة حياة الأصول.",
+        item4: "تنمية مسارات المواهب للهندسة المتقدمة.",
+      },
+      pillars: {
+        title: "الركائز الاستراتيجية",
+        item1: {
+          title: "التميز التشغيلي",
+          description: "تنفيذ برامج EPC في الوقت المحدد مع تخطيط منضبط وإدارة مواقع دقيقة.",
+        },
+        item2: {
+          title: "ثقة العميل",
+          description: "بناء شراكات موثوقة عبر تقارير شفافة وحلول مشتركة.",
+        },
+        item3: {
+          title: "الابتكار والاستدامة",
+          description: "اعتماد تقنيات حديثة وممارسات مستدامة في التوريد والتنفيذ.",
+        },
+      },
+    },
+    aboutRecords: {
+      badge: "السجل",
+      title: "سجل توريد المشاريع",
+      subtitle: "تاريخ موثوق في التوريد والتسليم ودعم التشغيل.",
+      intro: {
+        title: "أداء التوريد والمشتريات",
+        description: "تنسق فرق التوريد لدينا بين الهندسة والشراء واللوجستيات للحفاظ على جداول المشاريع الصناعية.",
+      },
+      metrics: {
+        item1: { label: "حزم توريد رئيسية", value: "80+ تم تسليمها" },
+        item2: { label: "خفض متوسط زمن التوريد", value: "22٪" },
+        item3: { label: "شبكة الموردين", value: "120+ شريكًا" },
+        item4: { label: "فحوص الجودة", value: "100٪ معتمدة" },
+      },
+      highlights: {
+        title: "أبرز المحطات",
+        item1: {
+          title: "توريد معدات الجهد العالي",
+          description: "تنسيق توريد المحولات والسويتشغير وأنظمة الحماية للمجمعات الصناعية.",
+        },
+        item2: {
+          title: "مواد خطوط نقل الغاز",
+          description: "توفير الأنابيب وأجهزة القياس وحزم الصمامات لشبكات الغاز.",
+        },
+        item3: {
+          title: "تكامل مشاريع التكوير",
+          description: "مواءمة سلاسل التوريد الميكانيكية والكهربائية والأتمتة للمشاريع المتكاملة.",
+        },
+      },
+      supplies: {
+        title: "فئات التوريد",
+        item1: {
+          title: "أنظمة الكهرباء MV/LV",
+          description: "سويتشغير، محولات، UPS ومكونات توزيع الطاقة.",
+        },
+        item2: {
+          title: "الأجهزة الدقيقة والأتمتة",
+          description: "لوحات PLC، أجهزة ميدانية، عتاد SCADA وأسلاك التحكم.",
+        },
+        item3: {
+          title: "معدات نقل الغاز",
+          description: "أنابيب، صمامات، منظمات وحلول القياس.",
+        },
+        item4: {
+          title: "حزم ميكانيكية وإنشائية",
+          description: "سلالم وكوابل، هياكل دعم وأنظمة تثبيت متخصصة.",
+        },
+      },
+      timeline: {
+        title: "محطات التسليم الزمنية",
+        item1: {
+          year: "2016",
+          description: "توحيد إجراءات الشراء للمواقع الصناعية الوطنية.",
+        },
+        item2: {
+          year: "2019",
+          description: "توسيع برنامج اعتماد الموردين وزيادة التوطين.",
+        },
+        item3: {
+          year: "2023",
+          description: "دمج التتبع الرقمي للوجستيات والتفتيش ودعم التشغيل.",
+        },
+      },
     },
     contact: {
       title: "اتصل بنا",
