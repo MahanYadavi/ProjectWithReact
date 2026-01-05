@@ -10,7 +10,7 @@ function Services() {
     <div className="min-h-screen bg-white dark:bg-navy-950 pb-20 font-vazir text-navy-900 dark:text-gray-100">
       
       {/* Header */}
-      <div className="w-full h-48 md:h-64 lg:h-80 overflow-hidden relative bg-gray-900">
+      <section className="relative h-48 md:h-64 lg:h-80 overflow-hidden bg-gray-900 flex items-center justify-center text-white">
         <img
           src="/images/Palayeshgah.jpg"
           onError={(e) => {
@@ -18,10 +18,15 @@ function Services() {
               'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop';
           }}
           alt={t('header.imageAlt')}
-          className="w-full h-full object-cover brightness-75"
+          className="absolute inset-0 w-full h-full object-cover brightness-75"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </div>
+        <div className="relative z-10 px-4 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+            {t('commerce.main.title')}
+          </h1>
+        </div>
+      </section>
 
       <main
         className={`container mx-auto px-4 max-w-6xl mt-8 space-y-12 ${
