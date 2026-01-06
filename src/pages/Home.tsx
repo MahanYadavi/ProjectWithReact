@@ -31,6 +31,24 @@ const Home: React.FC = () => {
     { number: 50, suffix: '+', label: t('intro.stat3') },
   ];
 
+  const heroAccents = [
+    {
+      className: 'absolute -top-20 left-[8%] h-40 w-40 rounded-full border border-gold-500/30',
+      animation: { rotate: 360 },
+      transition: { duration: 30, repeat: Infinity, ease: 'linear' },
+    },
+    {
+      className: 'absolute bottom-24 right-[12%] h-52 w-52 rounded-full border border-sky-400/20',
+      animation: { rotate: -360 },
+      transition: { duration: 36, repeat: Infinity, ease: 'linear' },
+    },
+    {
+      className: 'absolute top-1/3 right-[30%] h-24 w-24 rounded-full bg-gold-500/20 blur-2xl',
+      animation: { y: [0, -18, 0], opacity: [0.2, 0.6, 0.2] },
+      transition: { duration: 8, repeat: Infinity, ease: 'easeInOut' },
+    },
+  ];
+
   const services = [
     { icon: Zap, title: t('services.electrical'), description: '' },
     { icon: Network, title: t('services.substations'), description: '' },
@@ -120,15 +138,39 @@ const clients = [
       <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
   {/* Background Image */}
   <div className="absolute inset-0 z-0">
-    <img
+    <motion.img
       src="/images/Banners/temp12.jpeg"
       alt="Industrial Background"
       className="w-full h-full object-cover filter brightness-75 scale-105"
+      initial={{ scale: 1.05 }}
+      animate={{ scale: 1.12 }}
+      transition={{ duration: 20, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
     />
   </div>
   <div className="absolute inset-0 z-10 bg-gradient-to-b from-navy-950/70 via-navy-950/40 to-navy-950/90"></div>
   <div className="absolute -top-24 left-10 h-64 w-64 rounded-full bg-gold-500/20 blur-3xl"></div>
   <div className="absolute -bottom-28 right-10 h-72 w-72 rounded-full bg-sky-500/10 blur-3xl"></div>
+  <div className="absolute inset-0 z-10 pointer-events-none">
+    {heroAccents.map((accent, index) => (
+      <motion.div
+        key={index}
+        className={accent.className}
+        animate={accent.animation}
+        transition={accent.transition}
+      />
+    ))}
+    <motion.div
+      className="absolute left-1/2 bottom-10 h-10 w-10 -translate-x-1/2 rounded-full border border-white/30"
+      animate={{ y: [0, 12, 0], opacity: [0.6, 1, 0.6] }}
+      transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
+    >
+      <motion.div
+        className="absolute left-1/2 top-2 h-2 w-2 -translate-x-1/2 rounded-full bg-white/80"
+        animate={{ y: [0, 12] }}
+        transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
+      />
+    </motion.div>
+  </div>
 
   {/* Content */}
   <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
@@ -139,6 +181,14 @@ const clients = [
       <motion.h1 variants={itemVariants} className="mt-6 text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight drop-shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
         {t('hero.subtitle')}
       </motion.h1>
+      <motion.div
+        variants={itemVariants}
+        className="mx-auto mb-8 flex items-center justify-center gap-3 text-sm uppercase tracking-[0.4em] text-white/60"
+      >
+        <Flame className="h-4 w-4 text-gold-400" />
+        <span>{t('hero.title')}</span>
+        <Flame className="h-4 w-4 text-gold-400" />
+      </motion.div>
       <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <Link to="/projects" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-gold-500 hover:bg-gold-600 text-white font-semibold rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-gold-500/50 space-x-2 rtl:space-x-reverse">
           <span>{t('hero.cta')}</span>
@@ -187,7 +237,18 @@ const clients = [
           </motion.div>
           <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={containerVariants}>
             {services.map((service, index) => (
-              <motion.div key={index} variants={itemVariants} className="bg-white/90 dark:bg-navy-900/80 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all group hover:-translate-y-2 border border-transparent hover:border-gold-500/30 backdrop-blur">
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ type: 'spring', stiffness: 220 }}
+                className="relative overflow-hidden bg-white/90 dark:bg-navy-900/80 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all group border border-transparent hover:border-gold-500/30 backdrop-blur"
+              >
+                <motion.div
+                  className="absolute -top-12 -right-16 h-32 w-32 rounded-full bg-gold-500/10 blur-2xl opacity-0 group-hover:opacity-100"
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+                />
                 <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-gold-600 to-gold-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-md">
                   <service.icon className="w-7 h-7 md:w-8 md:h-8 text-white" />
                 </div>
@@ -260,14 +321,20 @@ const clients = [
       </section>
 
       {/* Workflow Section */}
-      <section className="py-16 md:py-20 bg-gray-50 dark:bg-navy-900/30">
+      <section className="py-16 md:py-20 bg-gray-50 dark:bg-navy-900/30 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 dark:text-white mb-4">{t('workflow.title')}</h2>
           </motion.div>
           <div className="relative">
             {/* Connecting Line (Hidden on mobile) */}
-            <div className="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-gray-200 dark:bg-navy-700"></div>
+            <div className="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-gray-200 dark:bg-navy-700 overflow-hidden">
+              <motion.div
+                className="h-full w-1/3 bg-gradient-to-r from-transparent via-gold-500/70 to-transparent"
+                animate={{ x: ['-40%', '140%'] }}
+                transition={{ duration: 6, repeat: Infinity, ease: 'linear' }}
+              />
+            </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
               {workflowSteps.map((step, index) => (
