@@ -55,7 +55,7 @@ const ProjectRecords = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-navy-950 text-navy-900 dark:text-white">
       <section
-        className="relative h-[60vh] flex items-center justify-center text-center overflow-hidden"
+               className="relative h-48 md:h-64 lg:h-80 text-white overflow-hidden flex items-center justify-center text-center"
         style={{
           backgroundImage: "url('/images/Banners/aboutBanners.jpeg')",
           backgroundSize: 'cover',
