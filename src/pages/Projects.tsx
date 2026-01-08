@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { MapPin, Calendar, Tag } from 'lucide-react';
+import { MapPin, Calendar, Tag, X } from 'lucide-react';
 
 const categories = ['all', 'industrial', 'transmission', 'panels', 'infrastructure'];
 
@@ -182,6 +182,14 @@ const Projects: React.FC = () => {
        {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 py-8 backdrop-blur-sm">
           <div className="relative w-full max-w-3xl overflow-hidden rounded-3xl bg-white dark:bg-navy-900 shadow-2xl">
+                        <button
+              type="button"
+              onClick={() => setSelectedProject(null)}
+              className="absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-navy-900 shadow-lg transition hover:bg-gold-500 hover:text-white dark:bg-navy-800 dark:text-white dark:hover:bg-gold-500"
+              aria-label="Close project details"
+            >
+              <X className="h-5 w-5" />
+            </button>
             <div className="max-h-[85vh] overflow-y-auto">
               <div className="aspect-[16/9] w-full overflow-hidden">
                 <img

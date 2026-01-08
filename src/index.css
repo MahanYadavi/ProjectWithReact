@@ -15,16 +15,17 @@
 }
 @keyframes logo-rotate {
   0% {
-    transform: rotate(0deg);
+        transform: perspective(800px) rotateY(0deg);
   }
   100% {
-    transform: rotate(360deg);
+        transform: perspective(800px) rotateY(360deg);
   }
 }
 
 @layer utilities {
   .animate-logo-rotate {
-    animation: logo-rotate 1s infinite alternate;
+        animation: logo-rotate 1.4s linear infinite;
+    transform-style: preserve-3d;
   }
 }
 html {
