@@ -1,188 +1,214 @@
-import { useTranslation } from 'react-i18next';
-
 const ProjectRecords = () => {
-  const { t } = useTranslation();
-
-  const highlights = [
+  const rows = [
     {
-      title: t('aboutRecords.highlights.item1.title'),
-      description: t('aboutRecords.highlights.item1.description'),
+      right: {
+        title: 'تأمین لوله‌های پلی‌وینیل کلراید (U-PVC)',
+        supplier: 'پتروشیمی شازند',
+        logo: 'PS',
+      },
+      left: {
+        title: 'تأمین ملزومات ابزار دقیق و کابل‌های فرمان',
+        supplier: 'هلدینگ مپنا',
+        logo: 'MAP',
+      },
     },
     {
-      title: t('aboutRecords.highlights.item2.title'),
-      description: t('aboutRecords.highlights.item2.description'),
+      right: {
+        title: 'تأمین منبع تغذیه سوئیچینگ تک فاز',
+        supplier: 'شرکت هیرو',
+        logo: 'H',
+      },
+      left: {
+        title: 'تأمین تجهیزات اتاق کنترل و سیستم‌های مانیتورینگ',
+        supplier: 'شرکت پایش صنعت',
+        logo: 'PSI',
+      },
     },
     {
-      title: t('aboutRecords.highlights.item3.title'),
-      description: t('aboutRecords.highlights.item3.description'),
-    },
-  ];
-
-  const supplyItems = [
-    {
-      title: t('aboutRecords.supplies.item1.title'),
-      description: t('aboutRecords.supplies.item1.description'),
-    },
-    {
-      title: t('aboutRecords.supplies.item2.title'),
-      description: t('aboutRecords.supplies.item2.description'),
+      right: {
+        title: 'تأمین نوار برنجی نیمه‌سخت',
+        supplier: 'شرکت ذوب فلزات',
+        logo: 'ZF',
+      },
+      left: {
+        title: 'تأمین سرووموتور و گیربکس کنترل تکنیک',
+        supplier: 'شرکت مبدل‌کاران',
+        logo: 'MK',
+      },
     },
     {
-      title: t('aboutRecords.supplies.item3.title'),
-      description: t('aboutRecords.supplies.item3.description'),
+      right: {
+        title: 'تأمین کارت زیمنس مدل 6ES7-153-2BA82',
+        supplier: 'زیمنس آلمان',
+        logo: 'S',
+      },
+      left: {
+        title: 'تأمین باتری نیم‌سل نیکل-کادمیم',
+        supplier: 'شرکت مپنا',
+        logo: 'MAP',
+      },
     },
     {
-      title: t('aboutRecords.supplies.item4.title'),
-      description: t('aboutRecords.supplies.item4.description'),
-    },
-  ];
-
-  const timeline = [
-    {
-      year: t('aboutRecords.timeline.item1.year'),
-      description: t('aboutRecords.timeline.item1.description'),
-    },
-    {
-      year: t('aboutRecords.timeline.item2.year'),
-      description: t('aboutRecords.timeline.item2.description'),
+      right: {
+        title: 'تأمین میله تونل (TUNNEL ROD)',
+        supplier: 'فولاد مبارکه',
+        logo: 'FM',
+      },
+      left: {
+        title: 'تأمین کابل ابزار دقیق و کنترل',
+        supplier: 'کابل یزد',
+        logo: 'KY',
+      },
     },
     {
-      year: t('aboutRecords.timeline.item3.year'),
-      description: t('aboutRecords.timeline.item3.description'),
+      right: {
+        title: 'تأمین پمپ سانتریفیوژ چندمرحله‌ای عمودی',
+        supplier: 'گراندفوس',
+        logo: 'GR',
+      },
+      left: {
+        title: 'تأمین زنجیر نقاله صنعتی (RENOLD)',
+        supplier: 'شرکت رنولد',
+        logo: 'R',
+      },
+    },
+    {
+      right: {
+        title: 'تأمین ورق PVC سخت طبق ASTM D1784',
+        supplier: 'پتروشیمی امیرکبیر',
+        logo: 'AK',
+      },
+      left: {
+        title: 'تأمین قطعات ایمنی خطوط تولید گاز',
+        supplier: 'شرکت سامان انرژی',
+        logo: 'SE',
+      },
+    },
+    {
+      right: {
+        title: 'تأمین منبع تغذیه موکسا 75W',
+        supplier: 'موکسا تایوان',
+        logo: 'MX',
+      },
+      left: {
+        title: 'تأمین پوزیشنر روتار 1300KW FA',
+        supplier: 'شرکت اریا انرژی',
+        logo: 'AE',
+      },
+    },
+    {
+      right: {
+        title: 'تأمین دستگاه جوش و قطعات یدکی',
+        supplier: 'لینکلن',
+        logo: 'L',
+      },
+      left: {
+        title: 'تأمین تجهیزات ابزار دقیق',
+        supplier: 'شرکت دانش تجهیز',
+        logo: 'DT',
+      },
+    },
+    {
+      right: {
+        title: 'تأمین پتانسیومتر روتاری موقعیت‌یاب',
+        supplier: 'شرکت پارس صنعت',
+        logo: 'PS',
+      },
+      left: {
+        title: 'تأمین ولوهای کنترل و شیرآلات صنعتی',
+        supplier: 'شرکت صنعت آریا',
+        logo: 'SA',
+      },
     },
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-navy-950 text-navy-900 dark:text-white">
-      <section
-               className="relative h-48 md:h-64 lg:h-80 text-white overflow-hidden flex items-center justify-center text-center"
-        style={{
-          backgroundImage: "url('/images/Banners/aboutBanners.jpeg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-navy-950/75" />
-        <div className="relative z-10 max-w-3xl px-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-gold-300 mb-4">
-            {t('aboutRecords.badge')}
+    <div
+      className="min-h-screen bg-[#f8f4ef] text-navy-900 py-12 px-4"
+      dir="rtl"
+    >
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-8">
+          <p className="text-sm font-semibold text-[#b05d16] mb-2">
+            سوابق تأمین و پروژه‌ها
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            {t('aboutRecords.title')}
+          <h1 className="text-3xl md:text-4xl font-bold text-navy-900">
+            Project Records
           </h1>
-          <p className="text-base md:text-lg text-gray-200 leading-relaxed">
-            {t('aboutRecords.subtitle')}
-          </p>
         </div>
-      </section>
 
-      <section className="py-16 md:py-20 bg-white dark:bg-navy-950">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] items-start">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-navy-900 dark:text-white">
-                {t('aboutRecords.intro.title')}
-              </h2>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {t('aboutRecords.intro.description')}
-              </p>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-2xl bg-gray-50 dark:bg-navy-900 p-5 border border-gray-100 dark:border-navy-800">
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    {t('aboutRecords.metrics.item1.label')}
-                  </p>
-                  <p className="text-xl font-semibold text-navy-900 dark:text-white">
-                    {t('aboutRecords.metrics.item1.value')}
-                  </p>
-                </div>
-                <div className="rounded-2xl bg-gray-50 dark:bg-navy-900 p-5 border border-gray-100 dark:border-navy-800">
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    {t('aboutRecords.metrics.item2.label')}
-                  </p>
-                  <p className="text-xl font-semibold text-navy-900 dark:text-white">
-                    {t('aboutRecords.metrics.item2.value')}
-                  </p>
-                </div>
-                <div className="rounded-2xl bg-gray-50 dark:bg-navy-900 p-5 border border-gray-100 dark:border-navy-800">
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    {t('aboutRecords.metrics.item3.label')}
-                  </p>
-                  <p className="text-xl font-semibold text-navy-900 dark:text-white">
-                    {t('aboutRecords.metrics.item3.value')}
-                  </p>
-                </div>
-                <div className="rounded-2xl bg-gray-50 dark:bg-navy-900 p-5 border border-gray-100 dark:border-navy-800">
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    {t('aboutRecords.metrics.item4.label')}
-                  </p>
-                  <p className="text-xl font-semibold text-navy-900 dark:text-white">
-                    {t('aboutRecords.metrics.item4.value')}
-                  </p>
-                </div>
-              </div>
+        <div className="rounded-3xl border border-[#d8c7b2] bg-white shadow-[0_20px_60px_-40px_rgba(0,0,0,0.4)] overflow-hidden">
+          <div className="grid grid-cols-[1fr_auto_1fr] text-xs md:text-sm font-semibold bg-[#f0e4d6] text-[#6c4b2f]">
+            <div className="grid grid-cols-[1.2fr_0.6fr_0.4fr] gap-2 p-3 border-r border-[#d8c7b2]">
+              <span>شرح تأمین و سفارش پروژه</span>
+              <span className="text-center">کارفرما</span>
+              <span className="text-center">نشان</span>
             </div>
-            <div className="rounded-3xl bg-gradient-to-br from-navy-900 to-navy-950 p-8 text-white shadow-2xl">
-              <h3 className="text-2xl font-bold mb-4">
-                {t('aboutRecords.highlights.title')}
-              </h3>
-              <div className="space-y-4">
-                {highlights.map((item) => (
-                  <div key={item.title} className="rounded-2xl bg-white/10 p-4">
-                    <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
-                    <p className="text-sm text-gray-200 leading-relaxed">{item.description}</p>
+            <div className="w-3 bg-[#b05d16]" />
+            <div className="grid grid-cols-[1.2fr_0.6fr_0.4fr] gap-2 p-3">
+              <span>شرح تأمین و سفارش پروژه</span>
+              <span className="text-center">کارفرما</span>
+              <span className="text-center">نشان</span>
+            </div>
+          </div>
+
+          <div className="divide-y divide-[#eadccd]">
+            {rows.map((row) => (
+              <div
+                key={`${row.right.title}-${row.left.title}`}
+                className="grid grid-cols-[1fr_auto_1fr] text-sm text-[#3d2a1c] bg-white"
+              >
+                <div className="grid grid-cols-[1.2fr_0.6fr_0.4fr] gap-3 p-4 border-r border-[#eadccd]">
+                  <p className="leading-6">{row.left.title}</p>
+                  <p className="text-center text-xs md:text-sm text-[#6c4b2f]">
+                    {row.left.supplier}
+                  </p>
+                  <div className="flex items-center justify-center">
+                    <div className="h-10 w-10 rounded-full border border-[#d8c7b2] bg-[#f8f1e8] text-xs font-bold text-[#6c4b2f] flex items-center justify-center">
+                      {row.left.logo}
+                    </div>
                   </div>
-                ))}
+                </div>
+                <div className="w-3 bg-[#b05d16]" />
+                <div className="grid grid-cols-[1.2fr_0.6fr_0.4fr] gap-3 p-4">
+                  <p className="leading-6">{row.right.title}</p>
+                  <p className="text-center text-xs md:text-sm text-[#6c4b2f]">
+                    {row.right.supplier}
+                  </p>
+                  <div className="flex items-center justify-center">
+                    <div className="h-10 w-10 rounded-full border border-[#d8c7b2] bg-[#f8f1e8] text-xs font-bold text-[#6c4b2f] flex items-center justify-center">
+                      {row.right.logo}
+                    </div>
+                  </div>
+                </div>
               </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-between gap-6 mt-10 text-[#6c4b2f]">
+          <div className="flex items-center gap-3">
+            <div className="h-12 w-12 rounded-xl border border-[#d8c7b2] bg-white flex items-center justify-center text-xs font-bold">
+              QR
+            </div>
+            <div className="text-sm">
+              <p className="font-semibold">اطلاعات بیشتر</p>
+              <p className="text-xs text-[#8c6a4a]">کد رهگیری و گواهی‌ها</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="h-12 w-12 rounded-full border border-[#d8c7b2] bg-white flex items-center justify-center text-[10px] font-bold">
+              ISO
+            </div>
+            <div className="h-12 w-12 rounded-full border border-[#d8c7b2] bg-white flex items-center justify-center text-[10px] font-bold">
+              QA
+            </div>
+            <div className="h-12 w-12 rounded-full border border-[#d8c7b2] bg-white flex items-center justify-center text-[10px] font-bold">
+              CE
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="py-16 md:py-20 bg-gray-50 dark:bg-navy-900/50">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-navy-900 dark:text-white mb-10">
-            {t('aboutRecords.supplies.title')}
-          </h2>
-          <div className="grid gap-6 md:grid-cols-2">
-            {supplyItems.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl bg-white dark:bg-navy-900 p-6 shadow-lg border border-gray-100 dark:border-navy-800"
-              >
-                <h3 className="text-xl font-bold text-navy-900 dark:text-white mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-20 bg-white dark:bg-navy-950">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-navy-900 dark:text-white mb-10">
-            {t('aboutRecords.timeline.title')}
-          </h2>
-          <div className="space-y-6">
-            {timeline.map((item) => (
-              <div
-                key={item.year}
-                className="flex flex-col md:flex-row gap-4 md:items-center rounded-2xl bg-gray-50 dark:bg-navy-900 p-6 border border-gray-100 dark:border-navy-800"
-              >
-                <div className="text-2xl font-bold text-gold-600 dark:text-gold-400">
-                  {item.year}
-                </div>
-                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };
