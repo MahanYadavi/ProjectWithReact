@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap, Network, Flame, Cpu, Factory, HardHat, CheckCircle, Award, Users, GitBranch } from 'lucide-react';
+import { ArrowRight, Zap, Network, Cpu, Factory, HardHat, CheckCircle, Award, Users, GitBranch } from 'lucide-react';
 import Counter from '../components/Counter';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
@@ -29,24 +29,6 @@ const Home: React.FC = () => {
     { number: 25, suffix: '+', label: t('intro.stat1') },
     { number: 100, suffix: '+', label: t('intro.stat2') },
     { number: 50, suffix: '+', label: t('intro.stat3') },
-  ];
-
-  const heroAccents = [
-    {
-      className: 'absolute -top-20 left-[8%] h-40 w-40 rounded-full border border-gold-500/30',
-      animation: { rotate: 360 },
-      transition: { duration: 30, repeat: Infinity, ease: 'linear' },
-    },
-    {
-      className: 'absolute bottom-24 right-[12%] h-52 w-52 rounded-full border border-sky-400/20',
-      animation: { rotate: -360 },
-      transition: { duration: 36, repeat: Infinity, ease: 'linear' },
-    },
-    {
-      className: 'absolute top-1/3 right-[30%] h-24 w-24 rounded-full bg-gold-500/20 blur-2xl',
-      animation: { y: [0, -18, 0], opacity: [0.2, 0.6, 0.2] },
-      transition: { duration: 8, repeat: Infinity, ease: 'easeInOut' },
-    },
   ];
 
   const services = [
@@ -136,74 +118,43 @@ const clients = [
     <div className="min-h-screen bg-white dark:bg-navy-950 text-navy-900 dark:text-white overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
-  {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-    <motion.img
-      src="/images/Banners/temp12.jpeg"
-      alt="Industrial Background"
-      className="w-full h-full object-cover filter brightness-75 scale-105"
-      initial={{ scale: 1.05 }}
-      animate={{ scale: 1.12 }}
-      transition={{ duration: 20, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
-    />
-  </div>
-  <div className="absolute inset-0 z-10 bg-gradient-to-b from-navy-950/70 via-navy-950/40 to-navy-950/90"></div>
-  <div className="absolute -top-24 left-10 h-64 w-64 rounded-full bg-gold-500/20 blur-3xl"></div>
-  <div className="absolute -bottom-28 right-10 h-72 w-72 rounded-full bg-sky-500/10 blur-3xl"></div>
-  <div className="absolute inset-0 z-10 pointer-events-none">
-    {heroAccents.map((accent, index) => (
-      <motion.div
-        key={index}
-        className={accent.className}
-        animate={accent.animation}
-        transition={accent.transition}
-      />
-    ))}
-    <motion.div
-      className="absolute left-1/2 bottom-10 h-10 w-10 -translate-x-1/2 rounded-full border border-white/30"
-      animate={{ y: [0, 12, 0], opacity: [0.6, 1, 0.6] }}
-      transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
-    >
-      <motion.div
-        className="absolute left-1/2 top-2 h-2 w-2 -translate-x-1/2 rounded-full bg-white/80"
-        animate={{ y: [0, 12] }}
-        transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
-      />
-    </motion.div>
-  </div>
-
-  {/* Content */}
-  <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
-    <motion.div initial="hidden" animate="visible" variants={containerVariants}>
-      <motion.span variants={itemVariants} className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur">
-        {t('hero.title')}
-      </motion.span>
-      <motion.h1 variants={itemVariants} className="mt-6 text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight drop-shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-        {t('hero.subtitle')}
-      </motion.h1>
-      <motion.div
-        variants={itemVariants}
-        className="mx-auto mb-8 flex items-center justify-center gap-3 text-sm uppercase tracking-[0.4em] text-white/60"
-      >
-        <Flame className="h-4 w-4 text-gold-400" />
-        <span>{t('hero.title')}</span>
-        <Flame className="h-4 w-4 text-gold-400" />
-      </motion.div>
-      <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <Link to="/projects" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-gold-500 hover:bg-gold-600 text-white font-semibold rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-gold-500/50 space-x-2 rtl:space-x-reverse">
-          <span>{t('hero.cta')}</span>
-          <ArrowRight className="w-5 h-5 rtl:rotate-180" />
-        </Link>
-        <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full backdrop-blur-sm border border-white/20 transition-all">
-          {t('hero.learnMore')}
-        </Link>
-      </motion.div>
-    </motion.div>
-  </div>
-
-  {/* Bottom Gradient */}
-  <div className="absolute bottom-0 left-0 right-0 z-20 h-24 bg-gradient-to-t from-white dark:from-navy-950 to-transparent"></div>
-</section>
+        <div className="absolute inset-0 z-0">
+          <img
+            alt="Industrial Background"
+            className="w-full h-full object-cover filter brightness-75"
+            src="/images/Banners/temp12.jpeg"
+          />
+        </div>
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+          <div style={{ opacity: 1 }}>
+            <h1
+              className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight"
+              style={{ opacity: 1, transform: 'none' }}
+            >
+              {t('hero.subtitle')}
+            </h1>
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              style={{ opacity: 1, transform: 'none' }}
+            >
+              <Link
+                to="/projects"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-gold-600 hover:bg-gold-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-gold-500/50 space-x-2 rtl:space-x-reverse"
+              >
+                <span>{t('hero.cta')}</span>
+                <ArrowRight className="w-5 h-5 rtl:rotate-180" />
+              </Link>
+              <Link
+                to="/contact"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg backdrop-blur-sm border border-white/20 transition-all"
+              >
+                {t('hero.learnMore')}
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 z-20 h-24 bg-gradient-to-t from-white dark:from-navy-950 to-transparent"></div>
+      </section>
 
 
       {/* Intro Section */}
